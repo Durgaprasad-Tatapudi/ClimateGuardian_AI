@@ -1,0 +1,545 @@
+ClimateGuardian AI: A Hybrid Machine Learning
+and Deep Learning Framework for Real-Time
+Multi-Hazard Climate Risk Prediction Using
+Open-Meteo Data
+Author 1
+Designation
+Department
+Specialization/Program
+Institution
+City, State, Country
+Email
+Author 2
+Designation
+Department
+Specialization/Program
+Institution
+City, State, Country
+Email
+Author 3
+Designation
+Department
+Specialization/Program
+Institution
+City, State, Country
+Email
+Author 4
+Designation
+Department
+Specialization/Program
+Institution
+City, State, Country
+Email
+Abstract—Rising frequencies of climate-driven extreme
+weather events necessitate robust, multi-hazard early warning
+systems. However, operational deployment is frequently hindered
+by complex stateful sequence models and target-proxy data leak-
+age during evaluation. This study proposes ClimateGuardian AI,
+a hybrid machine learning and deep learning framework for the
+real-time prediction of flood, heatwave, and compound climate
+risks. Operating on a 45-feature historical hydro-climatic dataset
+(2000–2018, 6,940 daily records), the framework engineers tem-
+poral and lagged variables to contextualize instantaneous envi-
+ronmental conditions. To ensure rigorous evaluation, we employ
+strict chronological partitioning and leakage-aware train-only
+preprocessing. Hazard-specific algorithms include a Random For-
+est for flood risk (F 1 = 0.4686), a proxy-remediated LightGBM
+for heatwave risk (F 1 = 0.8856), and a Logistic Regression
+stacking ensemble combining XGBoost and LightGBM bases
+for operational compound risk (F 1 = 0.4353). An offline Gated
+Recurrent Unit (GRU) sequence benchmark evaluates temporal
+capacity (F 1 = 0.3293). Comprehensive evaluation incorporates
+threshold-independent discrimination, probability calibration, ex-
+tended lead-time analysis, feature ablation, and SHAP-based
+interpretability. Finally, the framework demonstrates end-to-end
+stateless operational inference natively integrated with live Open-
+Meteo weather data.
+Index Terms—Climate risk prediction, flood prediction, heat-
+wave prediction, compound hazards, machine learning, deep
+learning, Open-Meteo, real-time inference, explainable AI.
+I. INTRODUCTION
+The increasing frequency and severity of extreme weather
+events, driven by anthropogenic climate change, pose un-
+precedented challenges to societal infrastructure and human
+safety [1]. Effective early-warning mechanisms for hazards
+such as floods, severe heatwaves, and their compounding
+effects are critical for proactive disaster management. While
+modern machine learning and deep learning architectures
+have demonstrated substantial theoretical capacity for envi-
+ronmental prediction, their transition from offline scientific
+studies to realtime operational systems remains fraught with
+methodological bottlenecks [2].
+Two fundamental challenges constrain the deployment of
+contemporary predictive systems. First, evaluating these mod-
+els on highly autocorrelated environmental time-series data
+using randomized cross-validation often introduces look-ahead
+bias, producing artificially inflated metrics that collapse during
+live deployment. Second, advanced temporal sequence models,
+such as Long Short-Term Memory (LSTM) networks or Gated
+Recurrent Units (GRU), achieve high predictive accuracy by
+maintaining deep historical states [3]. However, orchestrating
+the continuous retrieval, buffering, and processing of these
+historical sequences introduces severe latency and complexity
+constraints in live, stateless operational environments.
+To address these limitations, this study proposes Climate-
+Guardian AI, a hybrid predictive framework integrating tra-
+ditional machine learning and deep learning methodologies.
+The system is designed to provide robust, multi-hazard risk
+assessment utilizing a 45-feature hydro-climatic dataset while
+strictly enforcing a leakage-aware chronological evaluation
+protocol. By deliberately distinguishing between theoretical
+offline sequence benchmarks and deployment-ready stateless
+algorithms, the framework successfully bridges the gap be-
+tween historical predictive evaluation and live Open-Meteo
+operational inference.
+II. RELATEDWORK
+The application of artificial intelligence to climate science
+has evolved rapidly. Flood prediction frameworks have in-
+creasingly relied upon ensemble tree architectures, such as
+Random Forests, owing to their non-linear discrimination
+capabilities and interpretability across diverse hydrological
+catchments [4]. Concurrently, gradient boosting architectures
+like LightGBM [5] and XGBoost [6] have established domi-
+nance in evaluating localized temperature extremes and heat-
+wave events, frequently outperforming traditional thermody-
+namic numerical models over short-to-medium range horizons.
+Beyond isolated events, the prediction of compound climate
+hazards—where multiple extremes co-occur or sequentially
+interact—has emerged as a critical research frontier [7]. Deep
+learning techniques, particularly Recurrent Neural Networks
+(RNNs) utilizing LSTM and GRU cells, are highly proficient
+at mapping these complex temporal interactions [8], [9].
+However, literature assessing the operationalization of these
+architectures frequently overlooks the stringent computational
+requirements imposed by maintaining live, uninterrupted his-
+torical sequence buffers during API-driven realtime inference.
+Our framework addresses this gap by directly comparing
+the theoretical offline capacity of sequence models against
+the practical viability of a stateless stacking ensemble for
+compound risk generation.
+III. PROPOSEDCLIMATEGUARDIANAI FRAMEWORK
+A. System Overview
+The ClimateGuardian AI framework is structurally bifur-
+cated to address both rigorous scientific evaluation and oper-
+ational deployment feasibility.
+As illustrated in Fig. 1, the offline environment processes
+historical data arrays, engineering required feature spaces and
+enforcing chronological splitting protocols for model training
+and benchmark evaluations. Conversely, the operational envi-
+ronment is entirely stateless, extracting instantaneous weather
+observations via API interfaces, structuring them dynamically,
+and generating predictive risk probabilities without accessing
+a persistent local database.
+B. Data Sources
+The core historical hydro-climatic dataset integrates mete-
+orological and hydrological phenomena into a unified daily
+representation (Table I).
+TABLE I
+DATASETSTATISTICS(2000–2018)
+Metric Value
+Total Observations 6,940
+Features 45
+Flood Positives 1,880 (27.09%)
+Heatwave Positives 510 (7.35%)
+Compound Positives 255 (3.67%)
+Missing Feature Values 30
+Spanning from January 1, 2000, through December 31,
+2018, the dataset contains 6,940 daily records defined across
+45 continuous features. Climate variables include precipitation,
+temperature profiling, surface pressure, wind vectors, and
+evaporation. Hydrological inputs encompass surface runoff,
+total runoff, and soil moisture gradients.
+C. Feature Engineering
+To provide the stateless machine learning models with
+necessary temporal context, the base continuous features were
+systematically expanded. Standardized historical anomaly
+features were constructed to map deviations from estab-
+lished training norms. Furthermore, temporal aggregations—
+including 3-day, 5-day, 7-day, and 14-day rolling window
+statistics—were engineered to quantify accumulated environ-
+mental pressures prior to the instantaneous observation. Se-
+quential lagged features (t−1,t−2,t−3) were directly
+appended to capture immediate short-term derivatives.
+D. Multi-Hazard Target Formulation
+Three explicit predictive targets were algorithmically de-
+rived to form the hazard evaluation suite. Flood Risk operates
+as a binary target mapped from historical inundation and
+precipitation thresholds. Heatwave Risk identifies periods of
+severe temperature persistence. Compound Risk explicitly
+models the critical intersection or simultaneous occurrence of
+the preceding hydro-meteorological hazards.
+E. Real-Time Open-Meteo Data Integration
+To ensure the historical evaluation scales directly to live de-
+ployment, the feature space is natively aligned with the Open-
+Meteo REST API [10]. The API provides high-resolution,
+point-in-time meteorological observations that identical pre-
+processing pipelines dynamically structure into the requisite
+45-feature vector format during operational inference.
+IV. MACHINELEARNINGMETHODOLOGY
+A. Chronological Dataset Partitioning
+To simulate real-world deployment constraints, the evalua-
+tion strictly prohibits randomized shuffling, which inherently
+leaks future temporal correlations into the training distribution.
+A deterministic chronological split was enforced (Table II).
+TABLE II
+CHRONOLOGICALDATASETPARTITION
+Subset Period Samples Role
+Training 2000–2012 4749 Model fitting
+Validation 2013–2015 1095 Model selection/calibration
+Test 2016–2018 1096 Final evaluation
+B. Leakage-Aware Preprocessing
+Consistent with best practices [11], global standardiza-
+tion scaling and missing-value imputation were completely
+avoided. All mean parameters and scaler artifacts were fit-
+ted exclusively on the 4,749 training samples (2000–2012).
+These frozen objects were subsequently applied to the val-
+idation and test splits, guaranteeing zero temporal contam-
+ination. An extensive initial audit revealed that the heat-
+wave target definition leaked via four specific proxy vari-
+ables (temperature_max,temperature_max_lag1,
+hw_rolling,hw_exceed). These were explicitly removed,
+OFFLINE SCIENTIFIC EVALUATION REAL TIME OPERATIONAL INFERENCE
+Historical Climate/Hydrological Dataset
+45 Feature Dataset
+Feature Engineering
+(Lags, Rolling, Anomalies)
+Leakage-Free Preprocessing
+(Train-only Scaler & Imputation)
+Chronological Split
+Train: 2000–2012
+Validation: 2013–2015
+T est: 2016–2018
+Flood:
+Random Forest
+Heatwave:
+LightGBM
+41 restricted features
+(proxies excluded)
+Compound:
+XGBoost + LightGBM
+Probability Meta-Features
+[xgb_prob, lgbm_prob]
+Logistic Regression
+Meta-Learner
+Compound Probability
+Held-Out T est Evaluation
+F1-Score
+ROC-AUC
+PR-AUC
+Brier Score
+Confusion Matrix
+ROC/PR Curves
+Calibration
+SHAP
+Lead-Time Evaluation
+Ablation Study
+Open-Meteo REST API
+Live Weather Data
+LiveFeatureBuilder
+Training-Compatible
+Feature Construction
+Training-Compatible
+Scaling/Imputation
+Frozen Operational Models
+Flood → Random Forest
+Heatwave → Restricted LightGBM
+Compound → XGBoost + LightGBM
+Logistic Regression
+Meta-Learner (Compound)
+Hazard Probabilities
+Risk Levels
+Low / Medium / High
+Offline benchmark
+Not used in stateless realtime inference
+GRU
+14-day sequence
+(N, 14, 45)
+Fig. 1. Architecture of the ClimateGuardian AI framework showing the offline scientific evaluation pipeline and stateless realtime inference path.
+forcing the Heatwave model to evaluate a restricted, safe 41-
+feature subspace.
+C. Flood Prediction Model
+Flood-risk discrimination utilizes a Random Forest classifier
+[12] comprising 100 estimators, limited to a maximum depth
+of 5 to enforce generalizability. The algorithm applies balanced
+class weights to offset the natural hazard imbalance, heavily
+prioritizing recall sensitivity over precision optimization.
+D. Heatwave Prediction Model
+The Heatwave hazard relies on a LightGBM architecture [5]
+evaluating the restricted 41-feature space. The model leverages
+histogram-based node splitting, a learning rate of 0.1, and
+an unconstrained maximum depth, stabilized by scale-pos-
+weight adjustments to manage the extreme rarity of heatwave
+classifications.
+E. Compound Risk Stacking Model
+Operationalizing Compound risk prediction utilizes a Logis-
+tic Regression Stacking Ensemble [13]. Base LightGBM and
+XGBoost [6] models independently evaluate the instantaneous
+feature arrayx t.
+pXGB =XGBoost(x t)
+pLGBM =LightGBM(x t) (1)
+These intermediate probabilities form a meta-feature vector
+zt = [pXGB , pLGBM ]T , which a meta-learner subsequently
+maps to the final prediction:
+pcompound =LogisticRegression(z t)(2)
+F . GRU Offline Benchmark
+A PyTorch Gated Recurrent Unit (GRU) [9] serves as
+the theoretical offline sequence benchmark. Configured with
+a sequence length of 14, a 32-unit hidden dimension, and
+dropout at 0.2, the GRU ingests temporal tensors structured
+as(N,14,45). The model was optimized using Adam with a
+learning rate of 0.01 andBCEWithLogitsLoss.
+G. Evaluation Metrics
+Due to the highly skewed hazard distributions (Table I),
+traditional accuracy is uninformative [14]. The framework
+heavily relies on Precision, Recall, and theF 1-score:
+F1 = 2× Precision×Recall
+Precision+Recall (3)
+Threshold-independent metrics including the Area Under the
+Receiver Operating Characteristic Curve (ROC-AUC) and the
+Precision-Recall Curve (PR-AUC) comprehensively measure
+underlying discrimination. The Brier Score quantifies the
+calibration quality of the raw probability outputs.
+V. EXPERIMENTALRESULTS ANDANALYSIS
+The results quantify model performance exclusively on the
+held-out 2016–2018 test partition. Table III details the primary
+evaluation metrics.
+A. Flood Prediction
+The Random Forest model demonstrates practical discrim-
+ination, achieving an Accuracy of 0.6916, anF 1-score of
+0.4686, an ROC-AUC of 0.7184, and a Brier Score of 0.2391.
+The classification mapping (Fig. 2) highlights the intentional
+prioritization of Recall (0.6930) over Precision (0.3539), rep-
+resenting an operational trade-off that favors the detection of
+true emergencies at the cost of elevated false alarms.
+TABLE III
+FINALOFFLINETESTPERFORMANCE(2016–2018)
+Hazard Model Acc Prec Rec F1 ROC PR
+Flood Random Forest 0.6916 0.3539 0.6930 0.4686 0.7184 0.3500
+Heatwave LightGBM 0.9790 0.8558 0.9175 0.8856 0.9966 0.9677
+Compound Stacking (Op) 0.9124 0.2960 0.8222 0.4353 0.9553 0.4077
+Compound GRU (Offline) 0.8457 0.2010 0.9111 0.3293 0.9423 0.2965
+Fig. 2. Normalized confusion matrix for the flood prediction model on the
+held-out 2016–2018 test set.
+Fig. 3. ROC curve of the heatwave LightGBM classifier on the held-out test
+set.
+B. Heatwave Prediction
+The proxy-remediated LightGBM classifier achieves ex-
+traordinary performance despite operating on a strictly con-
+strained 41-feature subspace. It records an Accuracy of 0.9790,
+anF 1-score of 0.8856, an ROC-AUC of 0.9966, and a highly
+reliable Brier Score of 0.0159. The corresponding ROC curve
+(Fig. 3) visually affirms this robust boundary definition, con-
+firming that the model effectively maps underlying meteoro-
+Fig. 4. Heatwave prediction F1-score across verified lead-time horizons.
+logical drivers without relying on tautological proxy variables.
+C. Compound Risk Prediction
+The simultaneous intersection of hazards introduces signifi-
+cant predictive complexity. The operational Stacking Ensemble
+yields anF 1-score of 0.4353 and an ROC-AUC of 0.9553.
+The GRU sequential benchmark achieved anF 1-score of
+0.3293 and an ROC-AUC of 0.9423. This confirms that the
+stateless ensemble architecture outperformed the deep learning
+sequence benchmark under the evaluated conditions.
+D. Lead-Time Analysis
+Establishing early-warning horizons is fundamentally nec-
+essary for operational deployment. Employing the heatwave
+target as an evaluation baseline (Fig. 4), the model’sF 1-score
+degrades predictably as the horizon extends: 0.8744 at 1-day,
+0.7437 at 3-days, and 0.6533 at 5-days. Importantly, the model
+retains significant discriminatory capacity through the 7-day
+horizon (F1 = 0.6131), proving the viability of the engineered
+feature space for extended early-warning mechanisms.
+E. Ablation Study
+TABLE IV
+FEATURE ABLATION RESULTS FOR THE COMPOUND-RISK
+TARGET
+Feature Configuration Compound F1-Score
+Climate Only 0.2469
+Hydro Only 0.1905
+Climate + Hydro 0.3014
+Climate + Hydro + Temporal/Lag 0.3500
+Full Features 0.4000
+Feature contribution was evaluated via an ablation protocol
+targeting the Compound hazard (Fig. 5 and Table IV). Iso-
+lated subspaces produced limited discrimination: Climate Only
+Fig. 5. Compound-risk F1-score under the evaluated feature ablation config-
+urations.
+Fig. 6. Brier-score comparison for uncalibrated, Platt-scaled, and isotonic-
+calibrated compound-risk probabilities.
+(0.2469) and Hydro Only (0.1905). Combining climate and
+hydrological features improved the F1-score to 0.3014. Reinte-
+grating the engineered Temporal/Lag features further increased
+the F1-score to 0.3500, while the Full Features configuration
+achieved the highest observed F1-score of 0.4000.
+F . Probability Calibration
+Risk dissemination requires reliable probability values, not
+merely correct classification boundaries (Fig. 6). Compar-
+ing outputs against the uncalibrated Compound model base-
+line (Brier = 0.2039), post-processing via Platt Scaling [15]
+substantially rectified interval reliability (Brier = 0.0347),
+marginally outperforming Isotonic Regression [16] (Brier =
+0.0415).
+Fig. 7. SHAP-based feature importance for model interpretation.
+G. SHAP-Based Interpretation
+To satisfy explainability mandates, the internal structural
+dependencies of the evaluated algorithms were mapped utiliz-
+ing SHAP (SHapley Additive exPlanations) [17]. Applied to
+the Flood model (Fig. 7), SHAP definitively ranks specific
+localized precipitation accumulation parameters as primary
+indicators governing positive classification. These attributions
+provide vital transparency into the machine learning algo-
+rithm’s specific boundary construction without asserting fun-
+damental physical causation.
+VI. REAL-TIMEOPERATIONALINFERENCE
+A. Live Feature Construction
+Bridging the divide between historical test results and
+live deployment requires identical feature structuring. The
+ClimateGuardian AI operational pipeline connects directly to
+the Open-Meteo REST API, acquiring instantaneous high-
+resolution observations matching the original 45-feature pa-
+rameters. The system algorithmically calculates necessary run-
+ning windows, lag values, and standardized anomaly indicators
+dynamically based on the current payload without requiring
+external database lookups.
+B. Stateless Model Inference
+The core constraint defining the operational selection is
+stateless feasibility. The Stacking Ensemble (F 1 = 0.4353)
+not only demonstrates superior predictive performance over
+the GRU benchmark (Table III), but also avoids the significant
+architectural bottleneck of maintaining a mandatory 14-day
+sequence input buffer during live execution. Therefore, it
+is explicitly retained as the operational framework choice
+(Table V).
+TABLE V
+OPERATIONALMODELSELECTION
+Hazard Model Deployment Status
+Flood Random Forest Operational
+Heatwave LightGBM Operational
+Compound Stacking Ensemble Operational
+Compound GRU Offline benchmark only
+Its point-in-time stateless architecture ensures instantaneous
+classification upon receiving the single daily feature vector.
+C. Risk-Level Generation
+The operational pipeline generates standardized probability
+scores for Flood, Heatwave, and Compound hazards simulta-
+neously. These calibrated probabilities drive the logic for ex-
+ternal decision-making, completing the end-to-end translation
+of raw environmental API data into actionable, multi-hazard
+early-warning intelligence.
+VII. DISCUSSION
+The experimental results demonstrate that machine learn-
+ing architectures, when rigorously evaluated within chrono-
+logically constrained boundaries, can successfully untangle
+complex hydro-climatic dynamics. The deliberate removal of
+heatwave proxy features validated that models like LightGBM
+can achieve formidable baseline discrimination independent of
+trivial indicators.
+Furthermore, the ablation study explicitly confirms that
+instantaneous observations provide insufficient meteorological
+context. The substantial improvement derived from integrating
+temporal and lag metrics underscores that predictive capacity
+relies inherently upon understanding short-term accumulation
+and immediate environmental derivatives.
+Crucially, the disparity between the offline GRU and the
+operational Stacking Ensemble highlights a persistent tension
+in applied climate modeling: the trade-off between absolute
+temporal sequence capacity and live architectural deployment
+latency. The ClimateGuardian AI framework successfully nav-
+igates this constraint by isolating the sequence architecture as
+an offline diagnostic benchmark while structurally aligning the
+realtime inference pipeline entirely around stateless, point-in-
+time methodologies.
+VIII. LIMITATIONS ANDFUTUREWORK
+While demonstrating substantial operational capabilities,
+the current framework is constrained by specific architectural
+and data limitations. Fundamentally, the dataset represents a
+specific localized geographic climate topology spanning an 18-
+year historical window; applying these identical fitted models
+globally without localized retraining would inherently skew
+probabilities.
+Additionally, forcing the operational compound model to
+utilize a stateless stacking architecture sacrifices the superior
+temporal interaction capability inherent to the deep learning
+GRU sequence model. Future research should prioritize inves-
+tigating hybrid deployment architectures capable of securely
+persisting recurrent sequence buffers directly inside the in-
+ference pipeline without inducing live API latency. Spatial
+extensions utilizing Graph Neural Networks (GNN) over grid-
+ded, regional datasets would also fundamentally advance the
+methodology beyond point-based early warning thresholds.
+IX. CONCLUSION
+This study introduces ClimateGuardian AI, a sophisticated
+hybrid framework establishing a deployable mechanism for
+multi-hazard climate risk prediction. Through rigorous chrono-
+logical partitioning and the strict exclusion of target-leaking
+proxy variables, the evaluation isolates true predictive gen-
+eralization. The Random Forest and LightGBM methodolo-
+gies generated robust independent baselines for Flood and
+Heatwave risks, respectively. While the offline GRU sequence
+model provided theoretically superior compound-hazard dis-
+crimination, the integration of a Logistic Regression Stacking
+Ensemble provided a vital, stateless alternative bridging the de-
+ployment gap for realtime Open-Meteo inference. Ultimately,
+by systematically demonstrating the end-to-end transition from
+leakage-aware historical preprocessing to live architectural
+execution, ClimateGuardian AI represents a practical, highly
+resilient framework for operational disaster-risk mitigation.
+REFERENCES
+[1] V . Masson-Delmotte, P. Zhai, A. Pirani, S. L. Connors, C. P ´ean,
+S. Berger, N. Caud, Y . Chen, L. Goldfarb, M. I. Gomiset al.,Climate
+Change 2021: The Physical Science Basis. Contribution of Working
+Group I to the Sixth Assessment Report of the Intergovernmental Panel
+on Climate Change. Cambridge University Press, 2021.
+[2] J. Zscheischler, O. Martius, S. Westra, E. Bevacqua, C. Raymond, R. M.
+Horton, B. van den Hurk, A. AghaKouchak, A. J ¨egerkpe, J. Am ´ezcua
+et al., “A typology of compound weather and climate events,”Nature
+Reviews Earth & Environment, vol. 1, no. 6, pp. 333–347, 2020.
+[3] F. Kratzert, D. Klotz, C. Brenner, K. Schulz, and M. Herrnegger,
+“Rainfall-runoff modelling using long short-term memory (lstm) net-
+works,”Hydrology and Earth System Sciences, vol. 22, no. 11, pp.
+6005–6022, 2018.
+[4] A. Mosavi, P. Ozturk, and K.-w. Chau, “Flood prediction using machine
+learning models: Literature review,”Water, vol. 10, no. 11, p. 1536,
+2018.
+[5] G. Ke, Q. Meng, T. Finley, T. Wang, W. Chen, W. Ma, Q. Ye, and L. Tie-
+Yan, “Lightgbm: A highly efficient gradient boosting decision tree,” in
+Advances in Neural Information Processing Systems (NeurIPS), vol. 30,
+2017.
+[6] T. Chen and C. Guestrin, “Xgboost: A scalable tree boosting system,”
+inProceedings of the 22nd ACM SIGKDD International Conference on
+Knowledge Discovery and Data Mining, 2016, pp. 785–794.
+[7] J. Zscheischler, S. Westra, B. J. Van Den Hurk, S. I. Seneviratne, P. J.
+Ward, A. Pitman, A. AghaKouchak, D. N. Bresch, M. Leonard, T. Wahl
+et al., “Future climate risk from compound events,”Nature Climate
+Change, vol. 8, no. 6, pp. 469–477, 2018.
+[8] A. Chattopadhyay, P. Hassanzadeh, and S. Pasha, “Predicting clustered
+weather patterns: A test case for applications of convolutional neural
+networks to spatio-temporal climate data,”Scientific Reports, vol. 10,
+no. 1, p. 1317, 2020.
+[9] K. Cho, B. Van Merri ¨enboer, C. Gulcehre, D. Bahdanau, F. Bougares,
+H. Schwenk, and Y . Bengio, “Learning phrase representations using
+rnn encoder-decoder for statistical machine translation,” inProceedings
+of the 2014 Conference on Empirical Methods in Natural Language
+Processing (EMNLP), 2014, pp. 1724–1734.
+[10] Open-Meteo, “Open-meteo rest api documentation,” 2023, accessed:
+2024. [Online]. Available: https://open-meteo.com/en/docs
+[11] S. Kaufman, S. Rosset, C. Perlich, and O. Stitelman, “Leakage in data
+mining: Formulation, detection, and avoidance,”ACM Transactions on
+Knowledge Discovery from Data (TKDD), vol. 6, no. 4, pp. 1–21, 2012.
+[12] L. Breiman, “Random forests,”Machine learning, vol. 45, no. 1, pp.
+5–32, 2001.
+[13] D. H. Wolpert, “Stacked generalization,”Neural networks, vol. 5, no. 2,
+pp. 241–259, 1992.
+[14] H. He and E. A. Garcia, “Learning from imbalanced data,”IEEE
+Transactions on knowledge and data engineering, vol. 21, no. 9, pp.
+1263–1284, 2009.
+[15] J. Platt, “Probabilistic outputs for support vector machines and compar-
+isons to regularized likelihood methods,” inAdvances in large margin
+classifiers. MIT Press, 1999, pp. 61–74.
+[16] B. Zadrozny and C. Elkan, “Transforming classifier scores into accurate
+multiclass probability estimates,” inProceedings of the eighth ACM
+SIGKDD international conference on Knowledge discovery and data
+mining, 2002, pp. 694–699.
+[17] S. M. Lundberg and S.-I. Lee, “A unified approach to interpreting model
+predictions,” inAdvances in Neural Information Processing Systems
+(NeurIPS), vol. 30, 2017.

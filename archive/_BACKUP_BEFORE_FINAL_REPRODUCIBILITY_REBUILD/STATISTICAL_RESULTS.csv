@@ -1,0 +1,2 @@
+Target,Model_A,Model_B,McNemar_p-value
+compound_target,LightGBM,GRU,1.3009619159731756e-08

@@ -1,0 +1,17 @@
+Figure 1: ClimateGuardian AI System Architecture
+
+This scientific diagram depicts the complete workflow of the ClimateGuardian AI system, explicitly separating the Offline Scientific Evaluation pipeline (left and bottom) from the stateless Realtime Operational Inference pipeline (right).
+
+1. OFFLINE SCIENTIFIC EVALUATION (Left Branch):
+The historical climate and hydrological dataset is passed through a feature engineering layer that generates temporal lags, rolling aggregations, and anomaly metrics to produce a 45-feature dataset. A strict chronological split isolates training (2000–2012), validation (2013–2015), and test sets (2016–2018). Preprocessing (scaling and imputation) is fit exclusively on the training subset to prevent data leakage. The data then forks into three distinct model pipelines:
+- Flood: Random Forest model.
+- Heatwave: LightGBM model operating on a restricted 41-feature set (with proxy variables excluded).
+- Compound: An initial XGBoost and LightGBM base layer generates two meta-feature probabilities. These probabilities feed into a Logistic Regression meta-learner via Stacking to produce the final compound risk probability.
+
+All models independently predict against the unseen 2016–2018 test set, resulting in comprehensive evaluation metrics including F1-Score, ROC-AUC, Brier Score, Calibration, and SHAP analyses.
+
+2. OFFLINE BENCHMARK (Bottom Right/Center):
+An independent GRU sequence model requires a continuous 14-day trailing sequence (N, 14, 45). It is strictly used as an offline performance benchmark and is not integrated into the operational pipeline due to stateful data requirements.
+
+3. REALTIME OPERATIONAL INFERENCE (Right Branch):
+Live weather data is fetched continuously via the Open-Meteo REST API. A LiveFeatureBuilder programmatically maps the raw API JSON into the exact 45-feature tensor structure expected by the models. The frozen imputation means and training scalers transform the live row. The data is routed through the frozen Random Forest (Flood), restricted LightGBM (Heatwave), and Stacking Ensemble (Compound) models to generate stateless O(1) hazard probabilities. These are then classified into operational Risk Levels (Low, Medium, High).

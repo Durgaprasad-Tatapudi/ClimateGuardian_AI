@@ -1,0 +1,161 @@
+Metric Name,Value,Model,Target,Dataset Split,Source File
+F1-Score,0.3900928792569659,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.6865612543885121,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3624746686902335,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6405109489051095,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2923433874709977,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.586046511627907,LogisticRegression,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4685534591194968,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.7184119525908719,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.346809604812431,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6916058394160584,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3539192399049881,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.6930232558139535,RandomForest,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4419354838709677,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.7083942665575588,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3788674264029509,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6843065693430657,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3382716049382716,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.6372093023255814,XGBoost,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4165341812400636,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.7105297890874533,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.359718310426857,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6651459854014599,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3164251207729469,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.6093023255813953,LightGBM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4141104294478527,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.7080695826624079,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3475885619735889,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6514598540145985,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3089244851258581,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.627906976744186,LSTM,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4259259259259259,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.6779980466172162,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3012104568101557,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6605839416058394,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3187066974595843,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.641860465116279,GRU,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4320785597381342,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.7284322783306497,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.4000069796338781,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.6833941605839416,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3333333333333333,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.6139534883720931,StackingEnsemble,flood_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.8660714285714286,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9964294191098314,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.9623097925704605,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.9726277372262774,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.7637795275590551,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,1.0,LogisticRegression,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.848780487804878,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9945615718811596,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.9495216270077336,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.9717153284671532,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.8055555555555556,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.8969072164948454,RandomForest,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.8811881188118812,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9954438975057532,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.9557103564297468,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.978102189781022,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.8476190476190476,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9175257731958762,XGBoost,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.8877551020408163,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9969144402134092,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.9710813342248404,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.97992700729927,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.8787878787878788,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.8969072164948454,LightGBM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.6456140350877193,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9767705850180076,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.7261197949358372,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.9078467153284672,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.4893617021276595,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9484536082474226,LSTM,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.6381578947368421,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9814969608784042,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.831089328355433,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8996350364963503,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.4685990338164251,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,1.0,GRU,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.8855721393034826,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.997843204028771,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.9788312344295128,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.979014598540146,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.8557692307692307,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9175257731958762,StackingEnsemble,heatwave_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4038461538461538,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.939401628079078,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.2450064091710102,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8868613138686131,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2576687116564417,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9333333333333332,LogisticRegression,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.3888888888888889,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9511576276562004,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.4248544285041032,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8795620437956204,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2456140350877192,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9333333333333332,RandomForest,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.3783783783783784,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9386933079606724,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.5659997937943226,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8740875912408759,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2372881355932203,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9333333333333332,XGBoost,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.3478260869565217,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.940289671212602,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.294882273190754,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.9452554744525548,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.3404255319148936,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.3555555555555555,LightGBM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.3574468085106383,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.949698699651126,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3260184993760913,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8622262773722628,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2210526315789473,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9333333333333332,LSTM,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.4343434343434343,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.95980547626599,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.4838499017384257,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.8978102189781022,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2810457516339869,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.9555555555555556,GRU,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+F1-Score,0.3418803418803419,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+ROC-AUC,0.9494661169256792,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+PR-AUC,0.3890937544053081,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Accuracy,0.9297445255474452,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Precision,0.2777777777777778,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Recall,0.4444444444444444,StackingEnsemble,compound_target,Test 2016-2018,06_Results_corrected/MODEL_RESULTS.csv
+Lead-Time F1 (1-day),0.4187725631768953,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (3-day),0.4043321299638989,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (5-day),0.3898916967509025,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (7-day),0.3754512635379061,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (1-day),0.85,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (3-day),0.74,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (5-day),0.65,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (7-day),0.62,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (1-day),0.4050632911392405,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (3-day),0.4050632911392405,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (5-day),0.379746835443038,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Lead-Time F1 (7-day),0.3291139240506329,LightGBM,Heatwave,Test 2016-2018,06_Results_corrected/LEAD_TIME_RESULTS.csv
+Ablation F1 (A_Climate_Only),0.24,StackingEnsemble,Compound,Test 2016-2018,06_Results_corrected/ABLATION_RESULTS.csv
+Ablation F1 (B_Hydro_Only),0.25,StackingEnsemble,Compound,Test 2016-2018,06_Results_corrected/ABLATION_RESULTS.csv
+Ablation F1 (C_Climate_Hydro),0.2285714285714285,StackingEnsemble,Compound,Test 2016-2018,06_Results_corrected/ABLATION_RESULTS.csv
+Ablation F1 (D_Climate_Hydro_Temporal_Lag),0.4050632911392405,StackingEnsemble,Compound,Test 2016-2018,06_Results_corrected/ABLATION_RESULTS.csv
+Ablation F1 (E_Full_Features),0.4050632911392405,StackingEnsemble,Compound,Test 2016-2018,06_Results_corrected/ABLATION_RESULTS.csv
+Calibration Brier (Uncalibrated),0.2272275306155624,StackingEnsemble/Meta,flood_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Platt Scaling),0.2157385798609009,StackingEnsemble/Meta,flood_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Isotonic Regression),0.2616196545187609,StackingEnsemble/Meta,flood_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Uncalibrated),0.0209611079979516,StackingEnsemble/Meta,heatwave_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Platt Scaling),0.0176042059298675,StackingEnsemble/Meta,heatwave_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Isotonic Regression),0.0182970472091577,StackingEnsemble/Meta,heatwave_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Uncalibrated),0.2012726152157313,StackingEnsemble/Meta,compound_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Platt Scaling),0.0337635231367156,StackingEnsemble/Meta,compound_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Calibration Brier (Isotonic Regression),0.0386169447127444,StackingEnsemble/Meta,compound_target,Validation 2013-2015,06_Results_corrected/CALIBRATION_RESULTS.csv
+Rows,6940,N/A,All,All,scratch/audit_stats.json
+Features,45,N/A,All,All,scratch/audit_stats.json
+Flood Positives,1880,N/A,Flood,All,scratch/audit_stats.json
+Heatwave Positives,510,N/A,Heatwave,All,scratch/audit_stats.json
+Compound Positives,255,N/A,Compound,All,scratch/audit_stats.json
+Train Samples,4749,N/A,All,Train 2000-2012,scratch/audit_stats.json
+Val Samples,1095,N/A,All,Validation 2013-2015,scratch/audit_stats.json
+Test Samples,1096,N/A,All,Test 2016-2018,scratch/audit_stats.json

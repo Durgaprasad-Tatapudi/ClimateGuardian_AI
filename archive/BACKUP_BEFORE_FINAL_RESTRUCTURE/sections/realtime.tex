@@ -1,0 +1,19 @@
+\section{Realtime Operational Pipeline}
+\label{sec:realtime}
+
+To transition from offline historical evaluation to active early-warning capabilities, the evaluated models were integrated into a realtime operational inference pipeline. As depicted in the System Architecture (Fig.~\ref{fig:system_architecture}), the pipeline securely isolates offline scientific evaluation from realtime inference. Realtime execution validates pipeline operational functionality rather than historical predictive accuracy; predictive performance is established exclusively through the held-out 2016--2018 evaluation block.
+
+\subsection{Live Data Acquisition and Preprocessing Consistency}
+The operational pipeline retrieves meteorological information from the Open-Meteo REST API \cite{OpenMeteo2023}, which acts strictly as a realtime data interface rather than an independent predictive model. A \texttt{LiveFeatureBuilder} module transforms live API responses into the exact feature representation expected by the models. Critically, to preserve prediction consistency and avoid data contamination, the operational pipeline rigorously applies frozen preprocessing statistics derived exclusively from the 2000--2012 historical training boundary. The pipeline reuses the training-derived imputation means, the fitted StandardScaler, and the preserved feature-column ordering. The realtime system never recalculates standardization scalars from live data.
+
+\subsection{Multi-Hazard Inference}
+Operational multi-hazard inference executes sequentially across three independent prediction paths. The Flood operational model utilizes a Random Forest evaluating all 45 standardized features to output a flood probability. The Heatwave operational LightGBM model utilizes 41 restricted features; the four identified proxy variables (\texttt{temperature\_max}, \texttt{temperature\_max\_lag1}, \texttt{hw\_rolling}, \texttt{hw\_exceed}) are permanently excluded from the realtime subsystem to ensure inference aligns with underlying drivers rather than deterministic indicators. 
+
+For Compound hazard prediction, the operational architecture relies on a Logistic Regression Stacking Ensemble. As discussed, while the GRU achieves higher offline discriminatory performance ($F_1 = 0.4343$), it requires a persistent 14-day sequence buffer. The operational predictor uses Stacking ($F_1 = 0.3419$) because its inference interface is compatible with the point-in-time stateless architecture. Within this pipeline, the 45 standardized input features are evaluated by XGBoost and LightGBM bases, mapping into an intermediate meta-feature dimension of $(1, 2)$:
+\begin{equation}
+\mathbf{z}_t = \left[ p_t^{XGB}, p_t^{LGBM} \right]
+\end{equation}
+The Logistic Regression meta-learner then outputs the final Compound probability. The generated predictive probabilities are subsequently mapped into semantic operational risk levels (Low, Medium, and High).
+
+\subsection{Operational Validation}
+The pipeline was validated against two independent real-world geographical coordinates: (Latitude 17.0000, Longitude 81.8000) and (Latitude 16.5062, Longitude 80.6480). Both tests successfully generated realtime predictions comprising Flood, Heatwave, and Compound probabilities, individual XGBoost/LightGBM meta-probabilities, the expected meta-input shape of $[1, 2]$, and semantic risk levels. These successful executions demonstrate end-to-end operational compatibility between the live data interface, feature transformation, frozen preprocessing artifacts, and stacked inference components. Furthermore, software integrity was confirmed through comprehensive integration tests (\texttt{pytest -v} yielded 10 passed; \texttt{pytest -v -W error} yielded 10 passed) and a clean dependency resolution via \texttt{pip check}.

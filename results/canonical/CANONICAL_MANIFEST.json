@@ -1,0 +1,52 @@
+{
+    "project_name": "ClimateGuardian_AI",
+    "canonical_experiment_version": "1.0_leakage_free",
+    "dataset_names": [
+        "02_Processed_Data/climate_features.csv",
+        "02_Processed_Data/flood_features.csv"
+    ],
+    "train_period": "2000-2012",
+    "validation_period": "2013-2015",
+    "test_period": "2016-2018",
+    "random_seeds": {
+        "numpy": 42,
+        "pandas": 42,
+        "sklearn": 42
+    },
+    "model_names": [
+        "LogisticRegression",
+        "RandomForest",
+        "LightGBM",
+        "XGBoost",
+        "StackingEnsemble"
+    ],
+    "result_filenames": [
+        "MODEL_RESULTS.csv",
+        "ABLATION_RESULTS.csv",
+        "CALIBRATION_RESULTS.csv",
+        "LEAD_TIME_RESULTS.csv"
+    ],
+    "Paper_Figures_filenames": [
+        "Fig_01_Architecture.pdf",
+        "Fig_02_Flood_Confusion_Matrix.png",
+        "Fig_03_Heatwave_ROC.png",
+        "Fig_04_Heatwave_LeadTime.png",
+        "Fig_05_Compound_Ablation.png",
+        "Fig_06_Compound_Calibration.png",
+        "Fig_07_Flood_SHAP.png"
+    ],
+    "checksums": {
+        "ABLATION_RESULTS.csv": "14e5d82116a2e32e11747b7b01af880ac53961fb10c865c1d8c463348487418f",
+        "CALIBRATION_RESULTS.csv": "854e0d13fa438b211efd5939bc29a1436a0c9360560b68cada6fca7ba0b0b74d",
+        "LEAD_TIME_RESULTS.csv": "e380e691d024828ed71c47c08894343eb3e5c6616fb5312dea8c95059749d926",
+        "MODEL_RESULTS.csv": "5784fda6adb699fdc89b910feec359b0c2c0c262dffc48537cd3a0b125e970e5",
+        "Fig_01_Architecture.pdf": "c8bbcf53f731ec6c08e806d492b89457c2a8067aa92112069d8d2e5789efc6e8",
+        "Fig_02_Flood_Confusion_Matrix.png": "68b533b0f0420cdb7f9c0b406d1102ec5d3673c520120c188686547f0c94ae15",
+        "Fig_03_Heatwave_ROC.png": "4a2dec5610f62ac7ab057ae99d7accee26a5e580331bf963fc85e8410652cc4d",
+        "Fig_04_Heatwave_LeadTime.png": "4730a781b5b5cb2329e79b5441fd1de08619661c978ab6e1a81e8e2efac73c74",
+        "Fig_05_Compound_Ablation.png": "9105f2134de4a734e874db531f6b731b81b93791b6c548814d3155a034f6e0eb",
+        "Fig_06_Compound_Calibration.png": "36ac3aba6a57f7cda86a563ea6ec3afbbef2f2d02f84682740f3fabfa65c441a",
+        "Fig_07_Flood_SHAP.png": "6fdd0813d9992ffad40460eb986dfa7614e7a4b47aa0437e45d7f015c9386678"
+    },
+    "freeze_date": "2026-08-13"
+}

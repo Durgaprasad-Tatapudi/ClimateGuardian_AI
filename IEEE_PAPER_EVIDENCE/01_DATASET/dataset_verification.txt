@@ -1,0 +1,7 @@
+total records = 6940
+feature count = 45
+date range = 2000-01-01 to 2018-12-31
+flood positive count = 1880
+heatwave positive count = 510
+compound positive count = 255
+missing feature values = 30

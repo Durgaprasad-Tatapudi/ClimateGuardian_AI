@@ -1,0 +1,3339 @@
+[
+  {
+    "relative_path": "01_Raw_Datasets\\01_Flood\\India_CHIRPS_Daily_Rainfall_2000_2018.csv",
+    "filename": "India_CHIRPS_Daily_Rainfall_2000_2018.csv",
+    "file_size_mb": 0.19707393646240234,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 2,
+    "columns": [
+      "date",
+      "rainfall_mm"
+    ],
+    "dtypes": {
+      "date": "object",
+      "rainfall_mm": "float64"
+    },
+    "head": [
+      {
+        "date": "2000-01-01",
+        "rainfall_mm": 0.013882390902049
+      },
+      {
+        "date": "2000-01-02",
+      },
+      {
+        "date": "2000-01-03",
+        "rainfall_mm": 0.3883714557629442
+      },
+      {
+        "date": "2000-01-04",
+        "rainfall_mm": 0.357211209045482
+      },
+      {
+        "date": "2000-01-05",
+        "rainfall_mm": 0.5970503623906374
+      }
+    ],
+    "tail": [
+      {
+        "date": "2018-12-27",
+        "rainfall_mm": 0.3542891590957148
+      },
+      {
+        "date": "2018-12-28",
+        "rainfall_mm": 0.3968907294379685
+      },
+      {
+        "date": "2018-12-29",
+        "rainfall_mm": 0.0926452008366679
+      },
+      {
+        "date": "2018-12-30",
+        "rainfall_mm": 0.0363147173946975
+      },
+      {
+        "date": "2018-12-31",
+        "rainfall_mm": 0.1492934755395719
+      }
+    ],
+    "missing_counts": {
+      "date": 0,
+      "rainfall_mm": 0
+    },
+    "missing_pct": {
+      "date": 0.0,
+      "rainfall_mm": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "rainfall_mm": {
+        "count": 6940.0,
+        "mean": 2.7142238013565967,
+        "std": 2.8842735624092612,
+        "min": 0.0020109316104576,
+        "25%": 0.4214946215485009,
+        "50%": 1.3935636439954016,
+        "75%": 4.527247814355598,
+        "max": 15.130785687892612
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)"
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\01_Flood\\India_ERA5_Runoff_2000_2018.csv",
+    "filename": "India_ERA5_Runoff_2000_2018.csv",
+    "file_size_mb": 0.8692817687988281,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 6,
+    "columns": [
+      "system:index",
+      "date",
+      "runoff_m",
+      "sub_surface_runoff_m",
+      "surface_runoff_m",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "runoff_m": "float64",
+      "sub_surface_runoff_m": "float64",
+      "surface_runoff_m": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "runoff_m": 0.00025239725332322423,
+        "sub_surface_runoff_m": 0.0002434774816967965,
+        "surface_runoff_m": 8.919638165242978e-06,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "runoff_m": 0.000255104165448628,
+        "sub_surface_runoff_m": 0.00024028154955035467,
+        "surface_runoff_m": 1.4822677710632758e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "runoff_m": 0.0002840843095228089,
+        "sub_surface_runoff_m": 0.00024970227807230344,
+        "surface_runoff_m": 3.4380909442414286e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "runoff_m": 0.0002525397102822464,
+        "sub_surface_runoff_m": 0.00023637056639214747,
+        "surface_runoff_m": 1.6168449454859207e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "runoff_m": 0.00024627929885969255,
+        "sub_surface_runoff_m": 0.0002318905140771577,
+        "surface_runoff_m": 1.438939503085926e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "runoff_m": 0.0002479652325424233,
+        "sub_surface_runoff_m": 0.00023482461247633523,
+        "surface_runoff_m": 1.3139180354938128e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "runoff_m": 0.0002413342671955981,
+        "sub_surface_runoff_m": 0.00023115020433048356,
+        "surface_runoff_m": 1.0184816753771225e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "runoff_m": 0.0002376562142135013,
+        "sub_surface_runoff_m": 0.0002277497234410531,
+        "surface_runoff_m": 9.90646969241e-06,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "runoff_m": 0.00023464392204888807,
+        "sub_surface_runoff_m": 0.000224377242883259,
+        "surface_runoff_m": 1.0266366805835947e-05,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "runoff_m": 0.0002289316020088736,
+        "sub_surface_runoff_m": 0.0002210256552475888,
+        "surface_runoff_m": 7.905714149779533e-06,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "runoff_m": 0,
+      "sub_surface_runoff_m": 0,
+      "surface_runoff_m": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "runoff_m": 0.0,
+      "sub_surface_runoff_m": 0.0,
+      "surface_runoff_m": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "runoff_m": {
+        "count": 6940.0,
+        "mean": 0.0013608469305988894,
+        "std": 0.0012953899872880992,
+        "min": 0.00014740917860662996,
+        "25%": 0.0003067766079791923,
+        "50%": 0.0007699693913707193,
+        "75%": 0.002294351730905875,
+        "max": 0.0073736190570035
+      },
+      "sub_surface_runoff_m": {
+        "count": 6940.0,
+        "mean": 0.000815230483663877,
+        "std": 0.0007528065289902458,
+        "min": 0.000101536007887616,
+        "25%": 0.00019918669038406224,
+        "50%": 0.000438711153512674,
+        "75%": 0.001408969833906275,
+        "max": 0.004183940969873
+      },
+      "surface_runoff_m": {
+        "count": 6940.0,
+        "mean": 0.000545615979941788,
+        "std": 0.0006271758428091386,
+        "min": 5.163686275211858e-06,
+        "25%": 5.5462910974246353e-05,
+        "50%": 0.0002558786233256777,
+        "75%": 0.0009103834957686345,
+        "max": 0.0038101482235589
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\01_Flood\\India_ERA5_Soil_Moisture_2000_2018.csv",
+    "filename": "India_ERA5_Soil_Moisture_2000_2018.csv",
+    "file_size_mb": 0.9587430953979492,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 7,
+    "columns": [
+      "system:index",
+      "date",
+      "volumetric_soil_water_layer_1",
+      "volumetric_soil_water_layer_2",
+      "volumetric_soil_water_layer_3",
+      "volumetric_soil_water_layer_4",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "volumetric_soil_water_layer_1": "float64",
+      "volumetric_soil_water_layer_2": "float64",
+      "volumetric_soil_water_layer_3": "float64",
+      "volumetric_soil_water_layer_4": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "volumetric_soil_water_layer_1": 0.2002862130941292,
+        "volumetric_soil_water_layer_2": 0.2402559267767342,
+        "volumetric_soil_water_layer_3": 0.2764082240001961,
+        "volumetric_soil_water_layer_4": 0.328493311463788,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "volumetric_soil_water_layer_1": 0.1999115924688472,
+        "volumetric_soil_water_layer_2": 0.2397602792846191,
+        "volumetric_soil_water_layer_3": 0.2759585277941299,
+        "volumetric_soil_water_layer_4": 0.3282985181231778,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "volumetric_soil_water_layer_1": 0.1998749510342293,
+        "volumetric_soil_water_layer_2": 0.2397012850962351,
+        "volumetric_soil_water_layer_3": 0.2755926737463092,
+        "volumetric_soil_water_layer_4": 0.3281056612368295,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "volumetric_soil_water_layer_1": 0.1991770616561652,
+        "volumetric_soil_water_layer_2": 0.2393435813343008,
+        "volumetric_soil_water_layer_3": 0.2752725273044952,
+        "volumetric_soil_water_layer_4": 0.3279206459951973,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "volumetric_soil_water_layer_1": 0.1984801076394804,
+        "volumetric_soil_water_layer_2": 0.238805682043466,
+        "volumetric_soil_water_layer_3": 0.2748906791387676,
+        "volumetric_soil_water_layer_4": 0.3277380584463455,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "volumetric_soil_water_layer_1": 0.2271536602510389,
+        "volumetric_soil_water_layer_2": 0.2555248751378552,
+        "volumetric_soil_water_layer_3": 0.2771619668306213,
+        "volumetric_soil_water_layer_4": 0.3347134996711238,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "volumetric_soil_water_layer_1": 0.225862000374839,
+        "volumetric_soil_water_layer_2": 0.254666327339652,
+        "volumetric_soil_water_layer_3": 0.2768797594477593,
+        "volumetric_soil_water_layer_4": 0.3345235727199835,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "volumetric_soil_water_layer_1": 0.2250593143644804,
+        "volumetric_soil_water_layer_2": 0.2538646699808651,
+        "volumetric_soil_water_layer_3": 0.2765932184691331,
+        "volumetric_soil_water_layer_4": 0.3343356010242921,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "volumetric_soil_water_layer_1": 0.2235174010738612,
+        "volumetric_soil_water_layer_2": 0.2530188575318878,
+        "volumetric_soil_water_layer_3": 0.2762850122475983,
+        "volumetric_soil_water_layer_4": 0.3341459966691537,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "volumetric_soil_water_layer_1": 0.2219147826841278,
+        "volumetric_soil_water_layer_2": 0.2521476839434325,
+        "volumetric_soil_water_layer_3": 0.2759586709733729,
+        "volumetric_soil_water_layer_4": 0.3339546019860235,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "volumetric_soil_water_layer_1": 0,
+      "volumetric_soil_water_layer_2": 0,
+      "volumetric_soil_water_layer_3": 0,
+      "volumetric_soil_water_layer_4": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "volumetric_soil_water_layer_1": 0.0,
+      "volumetric_soil_water_layer_2": 0.0,
+      "volumetric_soil_water_layer_3": 0.0,
+      "volumetric_soil_water_layer_4": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "volumetric_soil_water_layer_1": {
+        "count": 6940.0,
+        "mean": 0.2571907777183885,
+        "std": 0.051954530919232876,
+        "min": 0.1852020097148,
+        "25%": 0.21336784725839567,
+        "50%": 0.23578876150266295,
+        "75%": 0.30508793151908786,
+        "max": 0.3834588547713576
+      },
+      "volumetric_soil_water_layer_2": {
+        "count": 6940.0,
+        "mean": 0.2809705484035206,
+        "std": 0.04390956577649668,
+        "min": 0.2261187885635676,
+        "25%": 0.24375001137049224,
+        "50%": 0.261455739981185,
+        "75%": 0.32265943360726534,
+        "max": 0.3862823298153864
+      },
+      "volumetric_soil_water_layer_3": {
+        "count": 6940.0,
+        "mean": 0.2934475326798562,
+        "std": 0.033464042488980224,
+        "min": 0.2471778028220156,
+        "25%": 0.26408219381331904,
+        "50%": 0.2827429248767851,
+        "75%": 0.3240655502023979,
+        "max": 0.3744523629197235
+      },
+      "volumetric_soil_water_layer_4": {
+        "count": 6940.0,
+        "mean": 0.3283199984426362,
+        "std": 0.013908618754343629,
+        "min": 0.3020694871025864,
+        "25%": 0.3168775283128655,
+        "50%": 0.3269700864819933,
+        "75%": 0.33905239068134163,
+        "max": 0.362910437508398
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\01_Flood\\India_Flood_Events_GFD_2000_2018.csv",
+    "filename": "India_Flood_Events_GFD_2000_2018.csv",
+    "file_size_mb": 0.04168224334716797,
+    "metadata": "",
+    "num_rows": 142,
+    "num_cols": 16,
+    "columns": [
+      "system:index",
+      "country",
+      "country_code",
+      "deaths",
+      "displaced_people",
+      "event_id",
+      "gfd_country_name",
+      "glide_index",
+      "latitude",
+      "longitude",
+      "main_cause",
+      "other_country",
+      "primary_country",
+      "severity",
+      "validation_type",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "object",
+      "country": "object",
+      "country_code": "object",
+      "deaths": "float64",
+      "displaced_people": "float64",
+      "event_id": "float64",
+      "gfd_country_name": "object",
+      "glide_index": "object",
+      "latitude": "float64",
+      "longitude": "float64",
+      "main_cause": "object",
+      "other_country": "object",
+      "primary_country": "object",
+      "severity": "float64",
+      "validation_type": "object",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": "DFO_1641_From_20000918_to_20001021",
+        "country": "China, India, Nepal, Bangladesh, Bhutan",
+        "country_code": "['BM', 'BG', 'IN', 'CH', 'BT', 'UU', 'NP']",
+        "deaths": 1468.0,
+        "displaced_people": 24000000.0,
+        "event_id": 1641.0,
+        "gfd_country_name": "['BURMA', 'BANGLADESH', 'INDIA', 'CHINA', 'BHUTAN', 'In dispute BHUTAN/CHINA', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": NaN,
+        "latitude": 24.084064,
+        "longitude": 88.5453,
+        "main_cause": "Monsoonal rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 2.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_1747_From_20010708_to_20010810",
+        "country": "India, Bangladesh",
+        "country_code": "['BG', 'IN']",
+        "deaths": 100.0,
+        "displaced_people": 2000000.0,
+        "event_id": 1747.0,
+        "gfd_country_name": "['BANGLADESH', 'INDIA']",
+        "glide_index": NaN,
+        "latitude": 21.055916,
+        "longitude": 84.798732,
+        "main_cause": "Monsoonal rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 2.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_1789_From_20010820_to_20010911",
+        "country": "China, India, Nepal, Bangladesh",
+        "country_code": "['BG', 'IN', 'CH', 'UU', 'NP']",
+        "deaths": 65.0,
+        "displaced_people": 300000.0,
+        "event_id": 1789.0,
+        "gfd_country_name": "['BANGLADESH', 'INDIA', 'CHINA', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": NaN,
+        "latitude": 26.755588,
+        "longitude": 83.051328,
+        "main_cause": "Heavy rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_1791_From_20010907_to_20010924",
+        "country": "China, India, Nepal, Bangladesh",
+        "country_code": "['BG', 'IN', 'CH', 'UU', 'NP']",
+        "deaths": 146.0,
+        "displaced_people": 30000.0,
+        "event_id": 1791.0,
+        "gfd_country_name": "['BANGLADESH', 'INDIA', 'CHINA', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": NaN,
+        "latitude": 26.532079,
+        "longitude": 84.869961,
+        "main_cause": "Heavy rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_1974_From_20020621_to_20020828",
+        "country": "China, India, Myanmar (Burma), Nepal, Bangladesh, Bhutan",
+        "country_code": "['BM', 'BG', 'IN', 'CH', 'BT', 'UU', 'NP']",
+        "deaths": 503.0,
+        "displaced_people": 15000000.0,
+        "event_id": 1974.0,
+        "gfd_country_name": "['BURMA', 'BANGLADESH', 'INDIA', 'CHINA', 'BHUTAN', 'In dispute BHUTAN/CHINA', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": NaN,
+        "latitude": 25.841781,
+        "longitude": 89.269578,
+        "main_cause": "Monsoonal rain",
+        "other_country": "Bangledesh",
+        "primary_country": "India",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": "DFO_4459_From_20170330_to_20170418",
+        "country": "China, India, Nepal, Bangladesh, Bhutan",
+        "country_code": "['BM', 'BG', 'IN', 'CH', 'BT', 'UU', 'NP']",
+        "deaths": 0.0,
+        "displaced_people": 0.0,
+        "event_id": 4459.0,
+        "gfd_country_name": "['BURMA', 'BANGLADESH', 'INDIA', 'CHINA', 'BHUTAN', 'In dispute BHUTAN/CHINA', 'NEPAL']",
+        "glide_index": NaN,
+        "latitude": 24.317835,
+        "longitude": 90.682833,
+        "main_cause": "Heavy Rain",
+        "other_country": NaN,
+        "primary_country": "Bangladesh",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_4483_From_20170602_to_20170703",
+        "country": "China, India, Myanmar (Burma), Bangladesh, Bhutan",
+        "country_code": "['BM', 'BG', 'IN', 'CH', 'BT', 'UU', 'NP']",
+        "deaths": 6.0,
+        "displaced_people": 113.0,
+        "event_id": 4483.0,
+        "gfd_country_name": "['BURMA', 'BANGLADESH', 'INDIA', 'CHINA', 'BHUTAN', 'In dispute BHUTAN/CHINA', 'NEPAL']",
+        "glide_index": "FL-2017-000064-IND",
+        "latitude": 27.613121,
+        "longitude": 94.938714,
+        "main_cause": "Monsoonal Rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_4499_From_20170727_to_20170810",
+        "country": "India, Bangladesh",
+        "country_code": "['BG', 'IN']",
+        "deaths": 39.0,
+        "displaced_people": 47000.0,
+        "event_id": 4499.0,
+        "gfd_country_name": "['BANGLADESH', 'INDIA']",
+        "glide_index": NaN,
+        "latitude": 22.906125,
+        "longitude": 88.084765,
+        "main_cause": "Monsoonal Rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 1.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_4507_From_20170810_to_20170826",
+        "country": "China, India, Pakistan, Nepal, Bangladesh",
+        "country_code": "['BG', 'IN', 'CH', 'PK', 'UU', 'NP']",
+        "deaths": 253.0,
+        "displaced_people": 422106.0,
+        "event_id": 4507.0,
+        "gfd_country_name": "['BANGLADESH', 'INDIA', 'CHINA', 'PAKISTAN', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": NaN,
+        "latitude": 28.16566,
+        "longitude": 79.076049,
+        "main_cause": "Monsoonal Rain",
+        "other_country": NaN,
+        "primary_country": "India",
+        "severity": 2.0,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": "DFO_4508_From_20170810_to_20170826",
+        "country": "China, India, Myanmar (Burma), Nepal, Bangladesh",
+        "country_code": "['BM', 'BG', 'IN', 'CH', 'BT', 'UU', 'NP']",
+        "deaths": 117.0,
+        "displaced_people": 300000.0,
+        "event_id": 4508.0,
+        "gfd_country_name": "['BURMA', 'BANGLADESH', 'INDIA', 'CHINA', 'BHUTAN', 'In dispute BHUTAN/CHINA', 'In dispute CHINA/INDIA', 'NEPAL', 'In dispute INDIA/NEPAL']",
+        "glide_index": "FL-2017-000108-BGD",
+        "latitude": 24.591169,
+        "longitude": 90.014758,
+        "main_cause": "Monsoonal Rain",
+        "other_country": NaN,
+        "primary_country": "Bangladesh",
+        "severity": 1.5,
+        "validation_type": "News",
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "country": 0,
+      "country_code": 0,
+      "deaths": 0,
+      "displaced_people": 0,
+      "event_id": 0,
+      "gfd_country_name": 0,
+      "glide_index": 104,
+      "latitude": 0,
+      "longitude": 0,
+      "main_cause": 0,
+      "other_country": 123,
+      "primary_country": 0,
+      "severity": 0,
+      "validation_type": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "country": 0.0,
+      "country_code": 0.0,
+      "deaths": 0.0,
+      "displaced_people": 0.0,
+      "event_id": 0.0,
+      "gfd_country_name": 0.0,
+      "glide_index": 73.23943661971832,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "main_cause": 0.0,
+      "other_country": 86.61971830985915,
+      "primary_country": 0.0,
+      "severity": 0.0,
+      "validation_type": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [],
+    "min_date": "NOT CONFIRMED",
+    "max_date": "NOT CONFIRMED",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": "latitude",
+    "lon_col": "longitude",
+    "geo_coverage": {
+      "lat_min": 10.712137,
+      "lat_max": 35.030504,
+      "lon_min": 67.90249,
+      "lon_max": 100.163684
+    },
+    "unique_locations": 142,
+    "num_stats": {
+      "deaths": {
+        "count": 142.0,
+        "mean": 891.9295774647887,
+        "std": 8389.725737618144,
+        "min": 0.0,
+        "25%": 13.0,
+        "50%": 42.0,
+        "75%": 155.0,
+        "max": 100000.0
+      },
+      "displaced_people": {
+        "count": 142.0,
+        "mean": 1135823.8591549296,
+        "std": 4391756.23380205,
+        "min": 0.0,
+        "25%": 3000.0,
+        "50%": 35000.0,
+        "75%": 300000.0,
+        "max": 40000000.0
+      },
+      "event_id": {
+        "count": 142.0,
+        "mean": 3342.239436619718,
+        "std": 711.6978393981084,
+        "min": 1641.0,
+        "25%": 2882.75,
+        "50%": 3319.5,
+        "75%": 3964.5,
+        "max": 4508.0
+      },
+      "latitude": {
+        "count": 142.0,
+        "mean": 24.46383797887324,
+        "std": 4.833605753427241,
+        "min": 10.712137,
+        "25%": 21.885990999999997,
+        "50%": 25.1792885,
+        "75%": 27.4234945,
+        "max": 35.030504
+      },
+      "longitude": {
+        "count": 142.0,
+        "mean": 84.31209138028167,
+        "std": 8.222251963390624,
+        "min": 67.90249,
+        "25%": 78.8170425,
+        "50%": 85.584595,
+        "75%": 90.98970424999999,
+        "max": 100.163684
+      },
+      "severity": {
+        "count": 142.0,
+        "mean": 1.3098591549295775,
+        "std": 0.384691063146168,
+        "min": 1.0,
+        "25%": 1.0,
+        "50%": 1.0,
+        "75%": 1.5,
+        "max": 2.0
+      }
+    },
+    "cat_counts": {
+      "system:index": "142 unique values (too many to list)",
+      "country": "28 unique values (too many to list)",
+      "country_code": "28 unique values (too many to list)",
+      "gfd_country_name": "32 unique values (too many to list)",
+      "glide_index": "37 unique values (too many to list)",
+      "main_cause": "22 unique values (too many to list)",
+      "other_country": [
+        "Bangledesh",
+        "Afghanistan",
+        "India",
+        "Bangladesh",
+        "Bhutan",
+        "Nepal",
+        "Pakistan"
+      ],
+      "primary_country": [
+        "India",
+        "Nepal",
+        "Burma",
+        "Pakistan",
+        "Bangladesh",
+        "China",
+        "Myanmar",
+        "Inda",
+        "Thailand"
+      ],
+      "validation_type": [
+        "News",
+        "0",
+        "Flood List"
+      ],
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\03_Common_Climate_Data\\India_ERA5_Humidity_2000_2018.csv",
+    "filename": "India_ERA5_Humidity_2000_2018.csv",
+    "file_size_mb": 0.8173828125,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 6,
+    "columns": [
+      "system:index",
+      "date",
+      "dewpoint_C",
+      "dewpoint_max_C",
+      "dewpoint_min_C",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "dewpoint_C": "float64",
+      "dewpoint_max_C": "float64",
+      "dewpoint_min_C": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "dewpoint_C": -3.4609808970963387,
+        "dewpoint_max_C": -0.4878287466323313,
+        "dewpoint_min_C": -6.4469263165470325,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "dewpoint_C": -3.695012845396464,
+        "dewpoint_max_C": -0.6547945289987511,
+        "dewpoint_min_C": -6.7601097840842606,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "dewpoint_C": -3.9476161070957967,
+        "dewpoint_max_C": -0.8844561443873423,
+        "dewpoint_min_C": -6.967000846412546,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "dewpoint_C": -4.296952294271657,
+        "dewpoint_max_C": -1.2429453035660845,
+        "dewpoint_min_C": -7.302414905490843,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "dewpoint_C": -4.168872055908496,
+        "dewpoint_max_C": -1.3062996909433786,
+        "dewpoint_min_C": -7.19751037928917,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "dewpoint_C": -4.561315720194509,
+        "dewpoint_max_C": -1.3799976813628612,
+        "dewpoint_min_C": -7.936850906709614,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "dewpoint_C": -6.833838938906901,
+        "dewpoint_max_C": -3.471487243087367,
+        "dewpoint_min_C": -10.306871246360798,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "dewpoint_C": -7.201362681979246,
+        "dewpoint_max_C": -4.000113168595647,
+        "dewpoint_min_C": -10.729824750398656,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "dewpoint_C": -5.701393058549815,
+        "dewpoint_max_C": -2.536910255418282,
+        "dewpoint_min_C": -9.450875351826612,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "dewpoint_C": -4.910050940046314,
+        "dewpoint_max_C": -1.7515151912492473,
+        "dewpoint_min_C": -8.226962405309049,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "dewpoint_C": 0,
+      "dewpoint_max_C": 0,
+      "dewpoint_min_C": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "dewpoint_C": 0.0,
+      "dewpoint_max_C": 0.0,
+      "dewpoint_min_C": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "dewpoint_C": {
+        "count": 6940.0,
+        "mean": 5.382561283078295,
+        "std": 6.8075068330503665,
+        "min": -8.738030398348242,
+        "25%": -0.8033757805444921,
+        "50%": 4.4511660784200195,
+        "75%": 12.454744847687335,
+        "max": 16.477241829117588
+      },
+      "dewpoint_max_C": {
+        "count": 6940.0,
+        "mean": 8.051285152672001,
+        "std": 6.250212529921485,
+        "min": -5.333932833163111,
+        "25%": 2.2879034903050144,
+        "50%": 7.613917988577167,
+        "75%": 14.415868367482425,
+        "max": 18.027706497670167
+      },
+      "dewpoint_min_C": {
+        "count": 6940.0,
+        "mean": 2.516656794053108,
+        "std": 7.518756552240545,
+        "min": -12.115734756164656,
+        "25%": -4.235213183156391,
+        "50%": 1.0551242105971879,
+        "75%": 10.38723028158089,
+        "max": 15.171419189577678
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\03_Common_Climate_Data\\India_ERA5_Surface_Pressure_2000_2018.csv",
+    "filename": "India_ERA5_Surface_Pressure_2000_2018.csv",
+    "file_size_mb": 0.7984533309936523,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 6,
+    "columns": [
+      "system:index",
+      "date",
+      "surface_pressure_hPa",
+      "surface_pressure_max_hPa",
+      "surface_pressure_min_hPa",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "surface_pressure_hPa": "float64",
+      "surface_pressure_max_hPa": "float64",
+      "surface_pressure_min_hPa": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "surface_pressure_hPa": 832.3612563492217,
+        "surface_pressure_max_hPa": 834.2699052449159,
+        "surface_pressure_min_hPa": 830.5498719563593,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "surface_pressure_hPa": 831.7938976573723,
+        "surface_pressure_max_hPa": 833.8804820262444,
+        "surface_pressure_min_hPa": 830.0923869755326,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "surface_pressure_hPa": 830.497849447563,
+        "surface_pressure_max_hPa": 832.1989774813911,
+        "surface_pressure_min_hPa": 828.9464460754474,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "surface_pressure_hPa": 830.6661704957143,
+        "surface_pressure_max_hPa": 832.0368300465377,
+        "surface_pressure_min_hPa": 829.1353623947076,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "surface_pressure_hPa": 830.9269534382394,
+        "surface_pressure_max_hPa": 832.6018494729899,
+        "surface_pressure_min_hPa": 829.3268933690885,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "surface_pressure_hPa": 829.1740419675593,
+        "surface_pressure_max_hPa": 831.1317111887844,
+        "surface_pressure_min_hPa": 827.492875393608,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "surface_pressure_hPa": 830.4667706149771,
+        "surface_pressure_max_hPa": 832.0910418351513,
+        "surface_pressure_min_hPa": 828.3223508054524,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "surface_pressure_hPa": 833.0375489002447,
+        "surface_pressure_max_hPa": 834.5087121811906,
+        "surface_pressure_min_hPa": 831.0586149747675,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "surface_pressure_hPa": 834.4939108080886,
+        "surface_pressure_max_hPa": 836.12586965857,
+        "surface_pressure_min_hPa": 832.8830604644851,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "surface_pressure_hPa": 834.8441548615316,
+        "surface_pressure_max_hPa": 836.4448031152818,
+        "surface_pressure_min_hPa": 833.2696918966492,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "surface_pressure_hPa": 0,
+      "surface_pressure_max_hPa": 0,
+      "surface_pressure_min_hPa": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "surface_pressure_hPa": 0.0,
+      "surface_pressure_max_hPa": 0.0,
+      "surface_pressure_min_hPa": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "surface_pressure_hPa": {
+        "count": 6940.0,
+        "mean": 828.5882904069831,
+        "std": 2.8992519048275223,
+        "min": 819.4275878392226,
+        "25%": 826.3306561944315,
+        "50%": 828.5691435230265,
+        "75%": 830.8037641812675,
+        "max": 836.4837358531198
+      },
+      "surface_pressure_max_hPa": {
+        "count": 6940.0,
+        "mean": 830.3461929658246,
+        "std": 3.008847798888494,
+        "min": 820.8910889735894,
+        "25%": 828.0122584711393,
+        "50%": 830.3632896369124,
+        "75%": 832.658923571592,
+        "max": 838.305019423854
+      },
+      "surface_pressure_min_hPa": {
+        "count": 6940.0,
+        "mean": 826.7091165287197,
+        "std": 2.906785879542375,
+        "min": 817.5372627062176,
+        "25%": 824.4363739246747,
+        "50%": 826.6120593485275,
+        "75%": 828.9364266675244,
+        "max": 834.8688393823428
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\03_Common_Climate_Data\\India_ERA5_Temperature_2000_2018.csv",
+    "filename": "India_ERA5_Temperature_2000_2018.csv",
+    "file_size_mb": 0.4420461654663086,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 4,
+    "columns": [
+      "date",
+      "temperature_avg_C",
+      "temperature_min_C",
+      "temperature_max_C"
+    ],
+    "dtypes": {
+      "date": "object",
+      "temperature_avg_C": "float64",
+      "temperature_min_C": "float64",
+      "temperature_max_C": "float64"
+    },
+    "head": [
+      {
+        "date": "2000-01-01",
+        "temperature_avg_C": 5.958753535813742,
+        "temperature_min_C": -0.4092762551372857,
+        "temperature_max_C": 12.622750721776526
+      },
+      {
+        "date": "2000-01-02",
+        "temperature_avg_C": 6.128765472410805,
+        "temperature_min_C": -0.2217002361758204,
+        "temperature_max_C": 13.038441447392188
+      },
+      {
+        "date": "2000-01-03",
+        "temperature_avg_C": 6.107337379860212,
+        "temperature_min_C": -0.1808255899646837,
+        "temperature_max_C": 12.995602265956734
+      },
+      {
+        "date": "2000-01-04",
+        "temperature_avg_C": 6.18762300156385,
+        "temperature_min_C": -0.2029361817662902,
+        "temperature_max_C": 13.05179411716341
+      },
+      {
+        "date": "2000-01-05",
+        "temperature_avg_C": 6.039061948211554,
+        "temperature_min_C": -0.3363254544061647,
+        "temperature_max_C": 12.77845324439204
+      }
+    ],
+    "tail": [
+      {
+        "date": "2018-12-27",
+        "temperature_avg_C": 4.68396621410659,
+        "temperature_min_C": -1.0441328729677366,
+        "temperature_max_C": 10.454540795608978
+      },
+      {
+        "date": "2018-12-28",
+        "temperature_avg_C": 3.47273431090008,
+        "temperature_min_C": -2.510715478541613,
+        "temperature_max_C": 9.353129945246051
+      },
+      {
+        "date": "2018-12-29",
+        "temperature_avg_C": 3.620972769856792,
+        "temperature_min_C": -2.8918689633838994,
+        "temperature_max_C": 10.020566403074326
+      },
+      {
+        "date": "2018-12-30",
+        "temperature_avg_C": 4.486940863842676,
+        "temperature_min_C": -2.041375164689839,
+        "temperature_max_C": 11.225308138047126
+      },
+      {
+        "date": "2018-12-31",
+        "temperature_avg_C": 4.729009974029509,
+        "temperature_min_C": -1.6727358165197757,
+        "temperature_max_C": 11.541982791394387
+      }
+    ],
+    "missing_counts": {
+      "date": 0,
+      "temperature_avg_C": 0,
+      "temperature_min_C": 0,
+      "temperature_max_C": 0
+    },
+    "missing_pct": {
+      "date": 0.0,
+      "temperature_avg_C": 0.0,
+      "temperature_min_C": 0.0,
+      "temperature_max_C": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "temperature_avg_C": {
+        "count": 6940.0,
+        "mean": 14.702370691483287,
+        "std": 5.2257454580637654,
+        "min": 2.7282134627237724,
+        "25%": 9.887145618519256,
+        "50%": 16.210418059784928,
+        "75%": 19.59096729383147,
+        "max": 22.647426515649727
+      },
+      "temperature_min_C": {
+        "count": 6940.0,
+        "mean": 9.315348071003623,
+        "std": 6.028782631774535,
+        "min": -3.5662709800052426,
+        "25%": 3.604587056362419,
+        "50%": 10.018478046252511,
+        "75%": 15.259930825986004,
+        "max": 17.864275041142434
+      },
+      "temperature_max_C": {
+        "count": 6940.0,
+        "mean": 20.11968186207236,
+        "std": 4.654888022003937,
+        "min": 8.481172506405187,
+        "25%": 16.060029074899106,
+        "50%": 21.80891315740763,
+        "75%": 23.965562006465987,
+        "max": 28.546068846461537
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)"
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\03_Common_Climate_Data\\India_ERA5_Total_Evaporation_2000_2018.csv",
+    "filename": "India_ERA5_Total_Evaporation_2000_2018.csv",
+    "file_size_mb": 0.5921764373779297,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 4,
+    "columns": [
+      "system:index",
+      "date",
+      "total_evaporation_m",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "total_evaporation_m": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "total_evaporation_m": -0.0007355375277332416,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "total_evaporation_m": -0.0007314048174679038,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "total_evaporation_m": -0.0007106776790537431,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "total_evaporation_m": -0.0007282475986579589,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "total_evaporation_m": -0.0007087498199677587,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "total_evaporation_m": -0.0007976803571075508,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "total_evaporation_m": -0.0008094468733112447,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "total_evaporation_m": -0.0007988928971018685,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "total_evaporation_m": -0.0008090108123106094,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "total_evaporation_m": -0.0008002910404202195,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "total_evaporation_m": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "total_evaporation_m": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "total_evaporation_m": {
+        "count": 6940.0,
+        "mean": -0.0016651061141245724,
+        "std": 0.000696121472901148,
+        "min": -0.003183100101094,
+        "25%": -0.00236826236299235,
+        "50%": -0.0015120488868318,
+        "75%": -0.00101546500844005,
+        "max": -0.0006324816636654582
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\03_Common_Climate_Data\\India_ERA5_Wind_2000_2018.csv",
+    "filename": "India_ERA5_Wind_2000_2018.csv",
+    "file_size_mb": 0.8267450332641602,
+    "metadata": "",
+    "num_rows": 6940,
+    "num_cols": 6,
+    "columns": [
+      "system:index",
+      "date",
+      "u_component_of_wind_10m",
+      "v_component_of_wind_10m",
+      "wind_speed_ms",
+      ".geo"
+    ],
+    "dtypes": {
+      "system:index": "int64",
+      "date": "object",
+      "u_component_of_wind_10m": "float64",
+      "v_component_of_wind_10m": "float64",
+      "wind_speed_ms": "float64",
+      ".geo": "object"
+    },
+    "head": [
+      {
+        "system:index": 20000101,
+        "date": "2000-01-01",
+        "u_component_of_wind_10m": -0.2394422206264344,
+        "v_component_of_wind_10m": -0.2779503889368165,
+        "wind_speed_ms": 1.610698436047588,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000102,
+        "date": "2000-01-02",
+        "u_component_of_wind_10m": -0.0079622612512495,
+        "v_component_of_wind_10m": -0.2615876822691193,
+        "wind_speed_ms": 1.6273580920319533,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000103,
+        "date": "2000-01-03",
+        "u_component_of_wind_10m": 0.2449952488929785,
+        "v_component_of_wind_10m": -0.2916462904939811,
+        "wind_speed_ms": 1.6022660277172531,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000104,
+        "date": "2000-01-04",
+        "u_component_of_wind_10m": 0.2527380514550166,
+        "v_component_of_wind_10m": -0.22169869149419,
+        "wind_speed_ms": 1.594905255235685,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20000105,
+        "date": "2000-01-05",
+        "u_component_of_wind_10m": 0.1719068609106403,
+        "v_component_of_wind_10m": -0.4483249199551954,
+        "wind_speed_ms": 1.5116564764070646,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "tail": [
+      {
+        "system:index": 20181227,
+        "date": "2018-12-27",
+        "u_component_of_wind_10m": 0.2254917113815945,
+        "v_component_of_wind_10m": -0.6756304752762937,
+        "wind_speed_ms": 1.6839570823115977,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181228,
+        "date": "2018-12-28",
+        "u_component_of_wind_10m": 0.3205062102065429,
+        "v_component_of_wind_10m": -0.5012733820842925,
+        "wind_speed_ms": 1.6498806131003028,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181229,
+        "date": "2018-12-29",
+        "u_component_of_wind_10m": 0.2107839784857125,
+        "v_component_of_wind_10m": -0.174057994296416,
+        "wind_speed_ms": 1.7852244571269735,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181230,
+        "date": "2018-12-30",
+        "u_component_of_wind_10m": -0.0390107090759449,
+        "v_component_of_wind_10m": -0.2259497741008154,
+        "wind_speed_ms": 1.6481144608967433,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      },
+      {
+        "system:index": 20181231,
+        "date": "2018-12-31",
+        "u_component_of_wind_10m": 0.0967682106707974,
+        "v_component_of_wind_10m": -0.386597592848756,
+        "wind_speed_ms": 1.5572982248509546,
+        ".geo": "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      }
+    ],
+    "missing_counts": {
+      "system:index": 0,
+      "date": 0,
+      "u_component_of_wind_10m": 0,
+      "v_component_of_wind_10m": 0,
+      "wind_speed_ms": 0,
+      ".geo": 0
+    },
+    "missing_pct": {
+      "system:index": 0.0,
+      "date": 0.0,
+      "u_component_of_wind_10m": 0.0,
+      "v_component_of_wind_10m": 0.0,
+      "wind_speed_ms": 0.0,
+      ".geo": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2000-01-01 00:00:00",
+    "max_date": "2018-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "system:index": {
+        "count": 6940.0,
+        "mean": 20090660.802161384,
+        "std": 54779.31981902254,
+        "min": 20000101.0,
+        "25%": 20040983.25,
+        "50%": 20090701.5,
+        "75%": 20140401.25,
+        "max": 20181231.0
+      },
+      "u_component_of_wind_10m": {
+        "count": 6940.0,
+        "mean": 0.549452194601589,
+        "std": 0.4332198965210389,
+        "min": -0.8174037979054829,
+        "25%": 0.2361909108163259,
+        "50%": 0.5268536412606964,
+        "75%": 0.845205869149454,
+        "max": 1.992641523122227
+      },
+      "v_component_of_wind_10m": {
+        "count": 6940.0,
+        "mean": 0.17622285742822646,
+        "std": 0.361462242536246,
+        "min": -0.8687023644122348,
+        "25%": -0.0949115540747491,
+        "50%": 0.16184847446437284,
+        "75%": 0.4355195332428262,
+        "max": 1.622801748234311
+      },
+      "wind_speed_ms": {
+        "count": 6940.0,
+        "mean": 1.794947529785043,
+        "std": 0.35163348557931295,
+        "min": 0.9307274935281792,
+        "25%": 1.5403448303810707,
+        "50%": 1.7624055487583488,
+        "75%": 2.0219663130681838,
+        "max": 3.213399992455377
+      }
+    },
+    "cat_counts": {
+      "date": "6940 unique values (too many to list)",
+      ".geo": [
+        "{\"type\":\"MultiPoint\",\"coordinates\":[]}"
+      ]
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\05_Recent_Data\\NASA_POWER_India_Recent_2019_2025.csv",
+    "filename": "NASA_POWER_India_Recent_2019_2025.csv",
+    "file_size_mb": 7.128503799438477,
+    "metadata": "",
+    "num_rows": 81824,
+    "num_cols": 13,
+    "columns": [
+      "date",
+      "state",
+      "city",
+      "latitude",
+      "longitude",
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "T2MDEW",
+      "RH2M",
+      "WS10M",
+      "PS",
+      "PRECTOTCORR"
+    ],
+    "dtypes": {
+      "date": "object",
+      "state": "object",
+      "city": "object",
+      "latitude": "float64",
+      "longitude": "float64",
+      "T2M": "float64",
+      "T2M_MAX": "float64",
+      "T2M_MIN": "float64",
+      "T2MDEW": "float64",
+      "RH2M": "float64",
+      "WS10M": "float64",
+      "PS": "float64",
+      "PRECTOTCORR": "float64"
+    },
+    "head": [
+      {
+        "date": "2019-01-01",
+        "state": "Andhra_Pradesh",
+        "city": "Vijayawada",
+        "latitude": 16.5062,
+        "longitude": 80.648,
+        "T2M": 20.67,
+        "T2M_MAX": 28.81,
+        "T2M_MIN": 12.88,
+        "T2MDEW": 11.62,
+        "RH2M": 61.73,
+        "WS10M": 1.96,
+        "PS": 101.3,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2019-01-01",
+        "state": "Andhra_Pradesh",
+        "city": "Visakhapatnam",
+        "latitude": 17.6868,
+        "longitude": 83.2185,
+        "T2M": 21.22,
+        "T2M_MAX": 24.74,
+        "T2M_MIN": 17.6,
+        "T2MDEW": 12.4,
+        "RH2M": 59.24,
+        "WS10M": 3.37,
+        "PS": 101.47,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2019-01-01",
+        "state": "Assam",
+        "city": "Guwahati",
+        "latitude": 26.1445,
+        "longitude": 91.7362,
+        "T2M": 14.52,
+        "T2M_MAX": 22.46,
+        "T2M_MIN": 8.29,
+        "T2MDEW": 8.59,
+        "RH2M": 70.29,
+        "WS10M": 1.85,
+        "PS": 97.29,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2019-01-01",
+        "state": "Bihar",
+        "city": "Patna",
+        "latitude": 25.5941,
+        "longitude": 85.1376,
+        "T2M": 13.94,
+        "T2M_MAX": 22.23,
+        "T2M_MIN": 6.22,
+        "T2MDEW": 0.99,
+        "RH2M": 43.32,
+        "WS10M": 1.76,
+        "PS": 101.31,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2019-01-01",
+        "state": "Chhattisgarh",
+        "city": "Raipur",
+        "latitude": 21.2514,
+        "longitude": 81.6296,
+        "T2M": 16.29,
+        "T2M_MAX": 24.88,
+        "T2M_MIN": 6.67,
+        "T2MDEW": 2.73,
+        "RH2M": 42.92,
+        "WS10M": 1.53,
+        "PS": 98.74,
+        "PRECTOTCORR": 0.0
+      }
+    ],
+    "tail": [
+      {
+        "date": "2025-12-31",
+        "state": "Telangana",
+        "city": "Hyderabad",
+        "latitude": 17.385,
+        "longitude": 78.4867,
+        "T2M": 18.86,
+        "T2M_MAX": 26.02,
+        "T2M_MIN": 13.41,
+        "T2MDEW": 13.21,
+        "RH2M": 72.49,
+        "WS10M": 1.87,
+        "PS": 95.57,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2025-12-31",
+        "state": "Tripura",
+        "city": "Agartala",
+        "latitude": 23.8315,
+        "longitude": 91.2868,
+        "T2M": 14.51,
+        "T2M_MAX": 20.77,
+        "T2M_MIN": 9.66,
+        "T2MDEW": 11.34,
+        "RH2M": 81.77,
+        "WS10M": 1.83,
+        "PS": 101.0,
+        "PRECTOTCORR": 0.01
+      },
+      {
+        "date": "2025-12-31",
+        "state": "Uttar_Pradesh",
+        "city": "Lucknow",
+        "latitude": 26.8467,
+        "longitude": 80.9462,
+        "T2M": 13.61,
+        "T2M_MAX": 20.33,
+        "T2M_MIN": 5.9,
+        "T2MDEW": 5.73,
+        "RH2M": 61.01,
+        "WS10M": 1.5,
+        "PS": 100.01,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "date": "2025-12-31",
+        "state": "Uttarakhand",
+        "city": "Dehradun",
+        "latitude": 30.3165,
+        "longitude": 78.0322,
+        "T2M": 8.8,
+        "T2M_MAX": 14.0,
+        "T2M_MIN": 5.44,
+        "T2MDEW": -0.35,
+        "RH2M": 55.1,
+        "WS10M": 1.42,
+        "PS": 85.87,
+        "PRECTOTCORR": 0.01
+      },
+      {
+        "date": "2025-12-31",
+        "state": "West_Bengal",
+        "city": "Kolkata",
+        "latitude": 22.5726,
+        "longitude": 88.3639,
+        "T2M": 14.08,
+        "T2M_MAX": 20.89,
+        "T2M_MIN": 8.33,
+        "T2MDEW": 9.43,
+        "RH2M": 75.16,
+        "WS10M": 2.23,
+        "PS": 101.31,
+        "PRECTOTCORR": 0.0
+      }
+    ],
+    "missing_counts": {
+      "date": 0,
+      "state": 0,
+      "city": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "T2M": 0,
+      "T2M_MAX": 0,
+      "T2M_MIN": 0,
+      "T2MDEW": 0,
+      "RH2M": 0,
+      "WS10M": 0,
+      "PS": 0,
+      "PRECTOTCORR": 0
+    },
+    "missing_pct": {
+      "date": 0.0,
+      "state": 0.0,
+      "city": 0.0,
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "T2M": 0.0,
+      "T2M_MAX": 0.0,
+      "T2M_MIN": 0.0,
+      "T2MDEW": 0.0,
+      "RH2M": 0.0,
+      "WS10M": 0.0,
+      "PS": 0.0,
+      "PRECTOTCORR": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "date"
+    ],
+    "min_date": "2019-01-01 00:00:00",
+    "max_date": "2025-12-31 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": "latitude",
+    "lon_col": "longitude",
+    "geo_coverage": {
+      "lat_min": 8.5241,
+      "lat_max": 34.0837,
+      "lon_min": 72.5714,
+      "lon_max": 94.1086
+    },
+    "unique_locations": 32,
+    "num_stats": {
+      "latitude": {
+        "count": 81824.0,
+        "mean": 22.584353125,
+        "std": 6.18803955227422,
+        "min": 8.5241,
+        "25%": 18.311999999999998,
+        "50%": 23.535600000000002,
+        "75%": 26.863125,
+        "max": 34.0837
+      },
+      "longitude": {
+        "count": 81824.0,
+        "mean": 81.63346875,
+        "std": 6.6771440567933835,
+        "min": 72.5714,
+        "25%": 76.8973,
+        "50%": 79.37870000000001,
+        "75%": 86.45935,
+        "max": 94.1086
+      },
+      "T2M": {
+        "count": 81824.0,
+        "mean": 23.530595179898317,
+        "std": 7.1135291171937975,
+        "min": -10.4,
+        "25%": 19.69,
+        "50%": 25.22,
+        "75%": 28.22,
+        "max": 42.06
+      },
+      "T2M_MAX": {
+        "count": 81824.0,
+        "mean": 29.00945932733672,
+        "std": 7.057232904149165,
+        "min": -3.67,
+        "25%": 25.82,
+        "50%": 29.33,
+        "75%": 32.85,
+        "max": 48.81
+      },
+      "T2M_MIN": {
+        "count": 81824.0,
+        "mean": 18.780028353539304,
+        "std": 7.605163079666236,
+        "min": -18.97,
+        "25%": 13.66,
+        "50%": 20.765,
+        "75%": 24.88,
+        "max": 35.75
+      },
+      "T2MDEW": {
+        "count": 81824.0,
+        "mean": 15.95220155455612,
+        "std": 8.487721373894775,
+        "min": -18.41,
+        "25%": 10.04,
+        "50%": 18.32,
+        "75%": 23.32,
+        "max": 28.09
+      },
+      "RH2M": {
+        "count": 81824.0,
+        "mean": 68.38755291845914,
+        "std": 19.840667805514013,
+        "min": 5.35,
+        "25%": 55.75,
+        "50%": 73.73,
+        "75%": 84.66,
+        "max": 99.96
+      },
+      "WS10M": {
+        "count": 81824.0,
+        "mean": 2.9030030308955808,
+        "std": 1.4103072488808601,
+        "min": 0.34,
+        "25%": 1.92,
+        "50%": 2.66,
+        "75%": 3.62,
+        "max": 14.42
+      },
+      "PS": {
+        "count": 81824.0,
+        "mean": 94.89891449941337,
+        "std": 7.379918395173764,
+        "min": 68.35,
+        "25%": 92.4075,
+        "50%": 97.04,
+        "75%": 100.02,
+        "max": 101.96
+      },
+      "PRECTOTCORR": {
+        "count": 81824.0,
+        "mean": 4.656387856863512,
+        "std": 10.923774596062335,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.2,
+        "75%": 4.52,
+        "max": 262.43
+      }
+    },
+    "cat_counts": {
+      "date": "2557 unique values (too many to list)",
+      "state": "29 unique values (too many to list)",
+      "city": "32 unique values (too many to list)"
+    }
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\05_Recent_Data\\POWER_Point_Daily_20190101_20251231_016d99N_081d23E_UTC.csv",
+    "filename": "POWER_Point_Daily_20190101_20251231_016d99N_081d23E_UTC.csv",
+    "file_size_mb": 0.13486194610595703,
+    "metadata": "-BEGIN HEADER-\\nNASA/POWER Source Native Resolution Daily Data\\nDates (month/day/year): 01/01/2019 through 12/31/2025 in UTC\\nLocation: latitude  16.9891   longitude 81.229\\nelevation from MERRA-2: Average for 0.5 x 0.625 degree lat/lon region = 107.61 meters\\nThe value for missing source data that cannot be computed or is outside of the sources availability range: -999\\nparameter(s):\\nT2M             MERRA-2 Temperature at 2 Meters (C)\\nT2M_MAX         MERRA-2 Temperature at 2 Meters Maximum (C)\\nT2M_MIN         MERRA-2 Temperature at 2 Meters Minimum (C)\\nT2MDEW          MERRA-2 Dew/Frost Point at 2 Meters (C)\\nRH2M            MERRA-2 Relative Humidity at 2 Meters (%)\\nWS10M           MERRA-2 Wind Speed at 10 Meters (m/s)\\nPS              MERRA-2 Surface Pressure (kPa)\\nPRECTOTCORR     MERRA-2 Precipitation Corrected (mm/day)...",
+    "num_rows": 2557,
+    "num_cols": 10,
+    "columns": [
+      "YEAR",
+      "DOY",
+      "T2M",
+      "T2M_MAX",
+      "T2M_MIN",
+      "T2MDEW",
+      "RH2M",
+      "WS10M",
+      "PS",
+      "PRECTOTCORR"
+    ],
+    "dtypes": {
+      "YEAR": "int64",
+      "DOY": "int64",
+      "T2M": "float64",
+      "T2M_MAX": "float64",
+      "T2M_MIN": "float64",
+      "T2MDEW": "float64",
+      "RH2M": "float64",
+      "WS10M": "float64",
+      "PS": "float64",
+      "PRECTOTCORR": "float64"
+    },
+    "head": [
+      {
+        "YEAR": 2019,
+        "DOY": 1,
+        "T2M": 20.08,
+        "T2M_MAX": 28.48,
+        "T2M_MIN": 12.47,
+        "T2MDEW": 10.5,
+        "RH2M": 60.7,
+        "WS10M": 1.8,
+        "PS": 100.59,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2019,
+        "DOY": 2,
+        "T2M": 20.94,
+        "T2M_MAX": 29.73,
+        "T2M_MIN": 13.1,
+        "T2MDEW": 13.15,
+        "RH2M": 66.64,
+        "WS10M": 1.99,
+        "PS": 100.57,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2019,
+        "DOY": 3,
+        "T2M": 21.4,
+        "T2M_MAX": 29.93,
+        "T2M_MIN": 14.3,
+        "T2MDEW": 14.06,
+        "RH2M": 67.58,
+        "WS10M": 2.11,
+        "PS": 100.57,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2019,
+        "DOY": 4,
+        "T2M": 21.05,
+        "T2M_MAX": 29.86,
+        "T2M_MIN": 14.17,
+        "T2MDEW": 14.86,
+        "RH2M": 72.98,
+        "WS10M": 2.74,
+        "PS": 100.54,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2019,
+        "DOY": 5,
+        "T2M": 20.75,
+        "T2M_MAX": 29.65,
+        "T2M_MIN": 13.97,
+        "T2MDEW": 14.56,
+        "RH2M": 72.68,
+        "WS10M": 2.57,
+        "PS": 100.38,
+        "PRECTOTCORR": 0.0
+      }
+    ],
+    "tail": [
+      {
+        "YEAR": 2025,
+        "DOY": 361,
+        "T2M": 20.8,
+        "T2M_MAX": 27.59,
+        "T2M_MIN": 15.58,
+        "T2MDEW": 16.47,
+        "RH2M": 77.98,
+        "WS10M": 2.09,
+        "PS": 100.21,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2025,
+        "DOY": 362,
+        "T2M": 20.86,
+        "T2M_MAX": 27.95,
+        "T2M_MIN": 14.93,
+        "T2MDEW": 16.52,
+        "RH2M": 78.17,
+        "WS10M": 1.97,
+        "PS": 100.26,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2025,
+        "DOY": 363,
+        "T2M": 20.94,
+        "T2M_MAX": 28.42,
+        "T2M_MIN": 14.49,
+        "T2MDEW": 15.87,
+        "RH2M": 75.54,
+        "WS10M": 2.01,
+        "PS": 100.21,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2025,
+        "DOY": 364,
+        "T2M": 21.87,
+        "T2M_MAX": 28.92,
+        "T2M_MIN": 14.97,
+        "T2MDEW": 16.69,
+        "RH2M": 75.27,
+        "WS10M": 1.67,
+        "PS": 100.08,
+        "PRECTOTCORR": 0.0
+      },
+      {
+        "YEAR": 2025,
+        "DOY": 365,
+        "T2M": 22.91,
+        "T2M_MAX": 29.11,
+        "T2M_MIN": 16.92,
+        "T2MDEW": 18.93,
+        "RH2M": 80.31,
+        "WS10M": 1.94,
+        "PS": 99.94,
+        "PRECTOTCORR": 0.0
+      }
+    ],
+    "missing_counts": {
+      "YEAR": 0,
+      "DOY": 0,
+      "T2M": 0,
+      "T2M_MAX": 0,
+      "T2M_MIN": 0,
+      "T2MDEW": 0,
+      "RH2M": 0,
+      "WS10M": 0,
+      "PS": 0,
+      "PRECTOTCORR": 0
+    },
+    "missing_pct": {
+      "YEAR": 0.0,
+      "DOY": 0.0,
+      "T2M": 0.0,
+      "T2M_MAX": 0.0,
+      "T2M_MIN": 0.0,
+      "T2MDEW": 0.0,
+      "RH2M": 0.0,
+      "WS10M": 0.0,
+      "PS": 0.0,
+      "PRECTOTCORR": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "YEAR"
+    ],
+    "min_date": "1970-01-01 00:00:00.000002019",
+    "max_date": "1970-01-01 00:00:00.000002025",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": null,
+    "lon_col": null,
+    "geo_coverage": "NOT CONFIRMED",
+    "unique_locations": "NOT CONFIRMED",
+    "num_stats": {
+      "YEAR": {
+        "count": 2557.0,
+        "mean": 2022.0,
+        "std": 2.000391198047751,
+        "min": 2019.0,
+        "25%": 2020.0,
+        "50%": 2022.0,
+        "75%": 2024.0,
+        "max": 2025.0
+      },
+      "DOY": {
+        "count": 2557.0,
+        "mean": 183.14313648807195,
+        "std": 105.46961753891458,
+        "min": 1.0,
+        "25%": 92.0,
+        "50%": 183.0,
+        "75%": 274.0,
+        "max": 366.0
+      },
+      "T2M": {
+        "count": 2557.0,
+        "mean": 27.336597575283534,
+        "std": 3.4219152060202873,
+        "min": 18.7,
+        "25%": 25.25,
+        "50%": 27.12,
+        "75%": 29.62,
+        "max": 36.7
+      },
+      "T2M_MAX": {
+        "count": 2557.0,
+        "mean": 33.08391083300743,
+        "std": 4.631378555949552,
+        "min": 23.91,
+        "25%": 29.61,
+        "50%": 31.47,
+        "75%": 36.78,
+        "max": 45.84
+      },
+      "T2M_MIN": {
+        "count": 2557.0,
+        "mean": 22.570872115760658,
+        "std": 3.548993032877177,
+        "min": 11.85,
+        "25%": 19.96,
+        "50%": 23.84,
+        "75%": 25.02,
+        "max": 31.6
+      },
+      "T2MDEW": {
+        "count": 2557.0,
+        "mean": 21.132624168947988,
+        "std": 3.5439068856301192,
+        "min": 1.11,
+        "25%": 18.36,
+        "50%": 21.91,
+        "75%": 24.37,
+        "max": 26.63
+      },
+      "RH2M": {
+        "count": 2557.0,
+        "mean": 73.99728588189284,
+        "std": 13.988944852157015,
+        "min": 28.08,
+        "25%": 62.11,
+        "50%": 77.29,
+        "75%": 86.34,
+        "max": 95.57
+      },
+      "WS10M": {
+        "count": 2557.0,
+        "mean": 3.026405944466171,
+        "std": 1.1216540698267965,
+        "min": 0.59,
+        "25%": 2.25,
+        "50%": 2.87,
+        "75%": 3.58,
+        "max": 10.14
+      },
+      "PS": {
+        "count": 2557.0,
+        "mean": 99.61876808760266,
+        "std": 0.45996811291294243,
+        "min": 98.47,
+        "25%": 99.23,
+        "50%": 99.62,
+        "75%": 100.01,
+        "max": 100.59
+      },
+      "PRECTOTCORR": {
+        "count": 2557.0,
+        "mean": 3.5387641767696514,
+        "std": 8.236018491044048,
+        "min": 0.0,
+        "25%": 0.0,
+        "50%": 0.14,
+        "75%": 3.46,
+        "max": 124.64
+      }
+    },
+    "cat_counts": {}
+  },
+  {
+    "relative_path": "01_Raw_Datasets\\04_Disaster_Event_Data\\public_emdat_custom_request_2026-08-11_8d185044-b54b-4807-8bb8-a570b438d8be.xlsx",
+    "filename": "public_emdat_custom_request_2026-08-11_8d185044-b54b-4807-8bb8-a570b438d8be.xlsx",
+    "file_size_mb": 0.16060924530029297,
+    "metadata": "EM-DAT Header skipped 0 rows.",
+    "num_rows": 429,
+    "num_cols": 47,
+    "columns": [
+      "DisNo.",
+      "Historic",
+      "Classification Key",
+      "Disaster Group",
+      "Disaster Subgroup",
+      "Disaster Type",
+      "Disaster Subtype",
+      "External IDs",
+      "Event Name",
+      "ISO",
+      "Country",
+      "Subregion",
+      "Region",
+      "Location",
+      "Origin",
+      "Associated Types",
+      "OFDA/BHA Response",
+      "Appeal",
+      "Declaration",
+      "AID Contribution ('000 US$)",
+      "Magnitude",
+      "Magnitude Scale",
+      "Latitude",
+      "Longitude",
+      "River Basin",
+      "Start Year",
+      "Start Month",
+      "Start Day",
+      "End Year",
+      "End Month",
+      "End Day",
+      "Total Deaths",
+      "No. Injured",
+      "No. Affected",
+      "No. Homeless",
+      "Total Affected",
+      "Reconstruction Costs ('000 US$)",
+      "Reconstruction Costs, Adjusted ('000 US$)",
+      "Insured Damage ('000 US$)",
+      "Insured Damage, Adjusted ('000 US$)",
+      "Total Damage ('000 US$)",
+      "Total Damage, Adjusted ('000 US$)",
+      "CPI",
+      "Admin Units",
+      "GADM Admin Units",
+      "Entry Date",
+      "Last Update"
+    ],
+    "dtypes": {
+      "DisNo.": "object",
+      "Historic": "object",
+      "Classification Key": "object",
+      "Disaster Group": "object",
+      "Disaster Subgroup": "object",
+      "Disaster Type": "object",
+      "Disaster Subtype": "object",
+      "External IDs": "object",
+      "Event Name": "object",
+      "ISO": "object",
+      "Country": "object",
+      "Subregion": "object",
+      "Region": "object",
+      "Location": "object",
+      "Origin": "object",
+      "Associated Types": "object",
+      "OFDA/BHA Response": "object",
+      "Appeal": "object",
+      "Declaration": "object",
+      "AID Contribution ('000 US$)": "float64",
+      "Magnitude": "float64",
+      "Magnitude Scale": "object",
+      "Latitude": "float64",
+      "Longitude": "float64",
+      "River Basin": "object",
+      "Start Year": "int64",
+      "Start Month": "int64",
+      "Start Day": "float64",
+      "End Year": "int64",
+      "End Month": "float64",
+      "End Day": "float64",
+      "Total Deaths": "float64",
+      "No. Injured": "float64",
+      "No. Affected": "float64",
+      "No. Homeless": "float64",
+      "Total Affected": "float64",
+      "Reconstruction Costs ('000 US$)": "float64",
+      "Reconstruction Costs, Adjusted ('000 US$)": "float64",
+      "Insured Damage ('000 US$)": "float64",
+      "Insured Damage, Adjusted ('000 US$)": "float64",
+      "Total Damage ('000 US$)": "float64",
+      "Total Damage, Adjusted ('000 US$)": "float64",
+      "CPI": "float64",
+      "Admin Units": "object",
+      "GADM Admin Units": "object",
+      "Entry Date": "object",
+      "Last Update": "object"
+    },
+    "head": [
+      {
+        "DisNo.": "2010-0416-IND",
+        "Historic": "No",
+        "Classification Key": "nat-hyd-flo-riv",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Hydrological",
+        "Disaster Type": "Flood",
+        "Disaster Subtype": "Riverine flood",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Lakhimpur district (Assam province)",
+        "Origin": "Monsoonal rain",
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": 12555.0,
+        "Magnitude Scale": "Km2",
+        "Latitude": 26.235,
+        "Longitude": 92.25,
+        "River Basin": "Singora",
+        "Start Year": 2010,
+        "Start Month": 9,
+        "Start Day": 5.0,
+        "End Year": 2010,
+        "End Month": 9.0,
+        "End Day": 17.0,
+        "Total Deaths": NaN,
+        "No. Injured": NaN,
+        "No. Affected": 30000.0,
+        "No. Homeless": NaN,
+        "Total Affected": 30000.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 67.73109452917775,
+        "Admin Units": "[{\"adm2_code\":70091,\"adm2_name\":\"Lakhimpur\"}]",
+        "GADM Admin Units": "[{\"gid_2\":\"IND.4.20_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Lakhimpur\"}]",
+        "Entry Date": "2011-01-10",
+        "Last Update": "2025-12-20"
+      },
+      {
+        "DisNo.": "2010-0694-IND",
+        "Historic": "No",
+        "Classification Key": "nat-met-sto-hai",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Meteorological",
+        "Disaster Type": "Storm",
+        "Disaster Subtype": "Hail",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Mushalpur, Baksa towns (Nalbari district, Assam province)",
+        "Origin": NaN,
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Kph",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2010,
+        "Start Month": 4,
+        "Start Day": 10.0,
+        "End Year": 2010,
+        "End Month": 4.0,
+        "End Day": 10.0,
+        "Total Deaths": 28.0,
+        "No. Injured": NaN,
+        "No. Affected": NaN,
+        "No. Homeless": 5000.0,
+        "Total Affected": 5000.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 67.73109452917775,
+        "Admin Units": "[{\"adm2_code\":17590,\"adm2_name\":\"Nalbari\"}]",
+        "GADM Admin Units": NaN,
+        "Entry Date": "2011-03-17",
+        "Last Update": "2023-09-25"
+      },
+      {
+        "DisNo.": "2019-0480-IND",
+        "Historic": "No",
+        "Classification Key": "nat-bio-epi-vir",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Biological",
+        "Disaster Type": "Epidemic",
+        "Disaster Subtype": "Viral disease",
+        "External IDs": NaN,
+        "Event Name": "Dengue",
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Rajendranagar area (Bihar)",
+        "Origin": NaN,
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Vaccinated",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 10,
+        "Start Day": NaN,
+        "End Year": 2019,
+        "End Month": 10.0,
+        "End Day": NaN,
+        "Total Deaths": NaN,
+        "No. Injured": 900.0,
+        "No. Affected": NaN,
+        "No. Homeless": NaN,
+        "Total Affected": 900.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 79.41078460433721,
+        "Admin Units": NaN,
+        "GADM Admin Units": NaN,
+        "Entry Date": "2019-10-07",
+        "Last Update": "2023-09-25"
+      },
+      {
+        "DisNo.": "2019-0331-IND",
+        "Historic": "No",
+        "Classification Key": "nat-hyd-flo-flo",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Hydrological",
+        "Disaster Type": "Flood",
+        "Disaster Subtype": "Flood (General)",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Sitamarhi, Sheohar, East Champaran, Muzaffarpur, Madhubani, Darbhanga, Supaul, Araria, Sahersa , Katihar, Purnia, Kishanganj districts (Bihar); Dhemaji, Lakhimpur, Biswanath, Barpeta, Chirang, Golaghat Jorhat, Sonitpur, Darrang, Nalbari, Bongaigaon, Morigaon, Nagaon, Majuli, Baksa, Kokrajhar, Dhubri, South Salmara, Goalpara, Kamrup, Hojai, Sivsagar, Tinsukia, Cachar, KarbiAnglrng, West Karbi-Anglong, Hailakandi, Dibrugarh districts (Assam); Maharashtra, Kerala, Rajasthan, West Bengal, Karnataka, Uttarakand, Himachal Pradesh, Punjab, Uttar Pradesh, Odisha",
+        "Origin": "Monsoon rain",
+        "Associated Types": "Slide (land, mud, snow, rock)",
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Km2",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 7,
+        "Start Day": 14.0,
+        "End Year": 2019,
+        "End Month": 9.0,
+        "End Day": 30.0,
+        "Total Deaths": 1900.0,
+        "No. Injured": NaN,
+        "No. Affected": 3000000.0,
+        "No. Homeless": NaN,
+        "Total Affected": 3000000.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": 200000.0,
+        "Insured Damage, Adjusted ('000 US$)": 251855.0,
+        "Total Damage ('000 US$)": 10000000.0,
+        "Total Damage, Adjusted ('000 US$)": 12592748.0,
+        "CPI": 79.41078460433721,
+        "Admin Units": "[{\"adm1_code\":1493,\"adm1_name\":\"Himachal Pradesh\"},{\"adm1_code\":1494,\"adm1_name\":\"Karnataka\"},{\"adm1_code\":1495,\"adm1_name\":\"Kerala\"},{\"adm1_code\":1498,\"adm1_name\":\"Maharashtra\"},{\"adm1_code\":1504,\"adm1_name\":\"Orissa\"},{\"adm1_code\":1505,\"adm1_name\":\"Punjab\"},{\"adm1_code\":1506,\"adm1_name\":\"Rajasthan\"},{\"adm1_code\":1511,\"adm1_name\":\"West Bengal\"},{\"adm1_code\":70081,\"adm1_name\":\"Uttar Pradesh\"},{\"adm1_code\":70082,\"adm1_name\":\"Uttarakhand\"},{\"adm2_code\":17576,\"adm2_name\":\"Barpeta\"},{\"adm2_code\":17577,\"adm2_name\":\"Cachar\"},{\"adm2_code\":17578,\"adm2_name\":\"Darrang\"},{\"adm2_code\":17579,\"adm2_name\":\"Dhuburi\"},{\"adm2_code\":17580,\"adm2_name\":\"Dibrugarh\"},{\"adm2_code\":17581,\"adm2_name\":\"Goalpara\"},{\"adm2_code\":17582,\"adm2_name\":\"Golaghat\"},{\"adm2_code\":17583,\"adm2_name\":\"Kamrup\"},{\"adm2_code\":17584,\"adm2_name\":\"Karbi Anglong\"},{\"adm2_code\":17589,\"adm2_name\":\"Nagaon\"},{\"adm2_code\":17590,\"adm2_name\":\"Nalbari\"},{\"adm2_code\":17592,\"adm2_name\":\"Sibsagar\"},{\"adm2_code\":17593,\"adm2_name\":\"Sonitpur\"},{\"adm2_code\":70086,\"adm2_name\":\"Bongaigaon\"},{\"adm2_code\":70087,\"adm2_name\":\"Dhemaji\"},{\"adm2_code\":70088,\"adm2_name\":\"Hailakandi\"},{\"adm2_code\":70089,\"adm2_name\":\"Jorhat\"},{\"adm2_code\":70090,\"adm2_name\":\"Kokrajhar\"},{\"adm2_code\":70091,\"adm2_name\":\"Lakhimpur\"},{\"adm2_code\":70092,\"adm2_name\":\"Marigaon\"},{\"adm2_code\":70093,\"adm2_name\":\"Tinsukia\"},{\"adm2_code\":17598,\"adm2_name\":\"Darbhanga\"},{\"adm2_code\":17608,\"adm2_name\":\"Katihar\"},{\"adm2_code\":17611,\"adm2_name\":\"Madhubani\"},{\"adm2_code\":17613,\"adm2_name\":\"Muzaffarpur\"},{\"adm2_code\":17620,\"adm2_name\":\"Purba Champaran\"},{\"adm2_code\":17621,\"adm2_name\":\"Purnia\"},{\"adm2_code\":17624,\"adm2_name\":\"Saharsa\"},{\"adm2_code\":17630,\"adm2_name\":\"Sitamarhi\"},{\"adm2_code\":70094,\"adm2_name\":\"Araria\"},{\"adm2_code\":70100,\"adm2_name\":\"Kishanganj\"},{\"adm2_code\":70103,\"adm2_name\":\"Sheohar\"},{\"adm2_code\":70104,\"adm2_name\":\"Supaul\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.13_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Himachal Pradesh\"},{\"gid_1\":\"IND.16_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Karnataka\"},{\"gid_1\":\"IND.17_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Kerala\"},{\"gid_1\":\"IND.20_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Maharashtra\"},{\"gid_1\":\"IND.26_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Odisha\"},{\"gid_1\":\"IND.28_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Punjab\"},{\"gid_1\":\"IND.29_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Rajasthan\"},{\"gid_1\":\"IND.34_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Uttar Pradesh\"},{\"gid_1\":\"IND.35_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Uttarakhand\"},{\"gid_1\":\"IND.36_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"West Bengal\"},{\"gid_1\":\"IND.4_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"parent2_1\",\"name_1\":\"Assam\"},{\"gid_2\":\"IND.5.15_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Katihar\"},{\"gid_2\":\"IND.5.17_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Kishanganj\"},{\"gid_2\":\"IND.5.1_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Araria\"},{\"gid_2\":\"IND.5.20_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Madhubani\"},{\"gid_2\":\"IND.5.22_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Muzaffarpur\"},{\"gid_2\":\"IND.5.27_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Purba Champaran\"},{\"gid_2\":\"IND.5.28_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Purnia\"},{\"gid_2\":\"IND.5.30_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Saharsa\"},{\"gid_2\":\"IND.5.34_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Sheohar\"},{\"gid_2\":\"IND.5.35_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Sitamarhi\"},{\"gid_2\":\"IND.5.37_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Supaul\"},{\"gid_2\":\"IND.5.9_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Darbhanga\"}]",
+        "Entry Date": "2019-07-15",
+        "Last Update": "2025-12-20"
+      },
+      {
+        "DisNo.": "2021-0072-IND",
+        "Historic": "No",
+        "Classification Key": "nat-cli-glo-glo",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Climatological",
+        "Disaster Type": "Glacial lake outburst flood",
+        "Disaster Subtype": "Glacial lake outburst flood",
+        "External IDs": "GLIDE:FL-2021-000021",
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Uttarakhand state",
+        "Origin": NaN,
+        "Associated Types": "Flood",
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": NaN,
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2021,
+        "Start Month": 2,
+        "Start Day": 7.0,
+        "End Year": 2021,
+        "End Month": 2.0,
+        "End Day": 8.0,
+        "Total Deaths": 234.0,
+        "No. Injured": NaN,
+        "No. Affected": NaN,
+        "No. Homeless": NaN,
+        "Total Affected": NaN,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": 210000.0,
+        "Total Damage, Adjusted ('000 US$)": 249504.0,
+        "CPI": 84.16698295725244,
+        "Admin Units": "[{\"adm1_code\":70082,\"adm1_name\":\"Uttarakhand\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.35_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Uttarakhand\"}]",
+        "Entry Date": "2021-02-09",
+        "Last Update": "2025-12-20"
+      }
+    ],
+    "tail": [
+      {
+        "DisNo.": "2018-9372-IND",
+        "Historic": "No",
+        "Classification Key": "nat-cli-dro-dro",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Climatological",
+        "Disaster Type": "Drought",
+        "Disaster Subtype": "Drought",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Karnataka, Maharashtra states",
+        "Origin": "Por rainfall",
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Km2",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2018,
+        "Start Month": 9,
+        "Start Day": NaN,
+        "End Year": 2019,
+        "End Month": 6.0,
+        "End Day": NaN,
+        "Total Deaths": NaN,
+        "No. Injured": NaN,
+        "No. Affected": 8200000.0,
+        "No. Homeless": NaN,
+        "Total Affected": 8200000.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": 1100000.0,
+        "Total Damage, Adjusted ('000 US$)": 1410306.0,
+        "CPI": 77.99726518795474,
+        "Admin Units": "[{\"adm1_code\":1494,\"adm1_name\":\"Karnataka\"},{\"adm1_code\":1498,\"adm1_name\":\"Maharashtra\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.16_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Karnataka\"},{\"gid_1\":\"IND.20_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Maharashtra\"}]",
+        "Entry Date": "2018-10-11",
+        "Last Update": "2025-12-20"
+      },
+      {
+        "DisNo.": "2019-0218-IND",
+        "Historic": "No",
+        "Classification Key": "nat-bio-epi-vir",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Biological",
+        "Disaster Type": "Epidemic",
+        "Disaster Subtype": "Viral disease",
+        "External IDs": NaN,
+        "Event Name": "Acute Encephalitis Syndrome (AES)",
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Muzaffarpur, Vaishali, Sheohar, East Champaran districts (Bihar)",
+        "Origin": NaN,
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Vaccinated",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 1,
+        "Start Day": 1.0,
+        "End Year": 2019,
+        "End Month": 6.0,
+        "End Day": 17.0,
+        "Total Deaths": 121.0,
+        "No. Injured": 418.0,
+        "No. Affected": NaN,
+        "No. Homeless": NaN,
+        "Total Affected": 418.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 79.41078460433721,
+        "Admin Units": NaN,
+        "GADM Admin Units": NaN,
+        "Entry Date": "2019-06-17",
+        "Last Update": "2023-09-25"
+      },
+      {
+        "DisNo.": "2019-0311-IND",
+        "Historic": "No",
+        "Classification Key": "nat-met-sto-lig",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Meteorological",
+        "Disaster Type": "Storm",
+        "Disaster Subtype": "Lightning/Thunderstorms",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "Odisha, Hyderabad",
+        "Origin": NaN,
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Kph",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 6,
+        "Start Day": 1.0,
+        "End Year": 2019,
+        "End Month": 6.0,
+        "End Day": 3.0,
+        "Total Deaths": 10.0,
+        "No. Injured": NaN,
+        "No. Affected": NaN,
+        "No. Homeless": NaN,
+        "Total Affected": NaN,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 79.41078460433721,
+        "Admin Units": "[{\"adm1_code\":1504,\"adm1_name\":\"Orissa\"},{\"adm2_code\":17553,\"adm2_name\":\"Hyderabad\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.26_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Odisha\"},{\"gid_2\":\"IND.32.2_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard2\",\"name_2\":\"Hyderabad\"}]",
+        "Entry Date": "2019-07-10",
+        "Last Update": "2025-12-20"
+      },
+      {
+        "DisNo.": "2019-0383-IND",
+        "Historic": "No",
+        "Classification Key": "nat-hyd-flo-flo",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Hydrological",
+        "Disaster Type": "Flood",
+        "Disaster Subtype": "Flood (General)",
+        "External IDs": NaN,
+        "Event Name": NaN,
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "West Bengal, Kerala, Odisha, Maharashtra",
+        "Origin": "Monsoon rain",
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Km2",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 8,
+        "Start Day": 12.0,
+        "End Year": 2019,
+        "End Month": 8.0,
+        "End Day": 15.0,
+        "Total Deaths": 32.0,
+        "No. Injured": NaN,
+        "No. Affected": 17500.0,
+        "No. Homeless": NaN,
+        "Total Affected": 17500.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 79.41078460433721,
+        "Admin Units": "[{\"adm1_code\":1495,\"adm1_name\":\"Kerala\"},{\"adm1_code\":1498,\"adm1_name\":\"Maharashtra\"},{\"adm1_code\":1504,\"adm1_name\":\"Orissa\"},{\"adm1_code\":1511,\"adm1_name\":\"West Bengal\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.17_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Kerala\"},{\"gid_1\":\"IND.20_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Maharashtra\"},{\"gid_1\":\"IND.26_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Odisha\"},{\"gid_1\":\"IND.36_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"West Bengal\"}]",
+        "Entry Date": "2019-08-16",
+        "Last Update": "2025-12-20"
+      },
+      {
+        "DisNo.": "2019-0550-IND",
+        "Historic": "No",
+        "Classification Key": "nat-met-sto-tro",
+        "Disaster Group": "Natural",
+        "Disaster Subgroup": "Meteorological",
+        "Disaster Type": "Storm",
+        "Disaster Subtype": "Tropical cyclone",
+        "External IDs": "GLIDE:TC-2019-000147",
+        "Event Name": "Tropical cyclone 'Bulbul'",
+        "ISO": "IND",
+        "Country": "India",
+        "Subregion": "Southern Asia",
+        "Region": "Asia",
+        "Location": "South Assam, Meghalaya, Tripura, Mizoram, West Begal, Odisha state",
+        "Origin": NaN,
+        "Associated Types": NaN,
+        "OFDA/BHA Response": "No",
+        "Appeal": "No",
+        "Declaration": "No",
+        "AID Contribution ('000 US$)": NaN,
+        "Magnitude": NaN,
+        "Magnitude Scale": "Kph",
+        "Latitude": NaN,
+        "Longitude": NaN,
+        "River Basin": NaN,
+        "Start Year": 2019,
+        "Start Month": 11,
+        "Start Day": 9.0,
+        "End Year": 2019,
+        "End Month": 11.0,
+        "End Day": 10.0,
+        "Total Deaths": 12.0,
+        "No. Injured": NaN,
+        "No. Affected": 130000.0,
+        "No. Homeless": NaN,
+        "Total Affected": 130000.0,
+        "Reconstruction Costs ('000 US$)": NaN,
+        "Reconstruction Costs, Adjusted ('000 US$)": NaN,
+        "Insured Damage ('000 US$)": NaN,
+        "Insured Damage, Adjusted ('000 US$)": NaN,
+        "Total Damage ('000 US$)": NaN,
+        "Total Damage, Adjusted ('000 US$)": NaN,
+        "CPI": 79.41078460433721,
+        "Admin Units": "[{\"adm1_code\":1487,\"adm1_name\":\"Assam\"},{\"adm1_code\":1501,\"adm1_name\":\"Meghalaya\"},{\"adm1_code\":1502,\"adm1_name\":\"Mizoram\"},{\"adm1_code\":1504,\"adm1_name\":\"Orissa\"},{\"adm1_code\":1509,\"adm1_name\":\"Tripura\"},{\"adm1_code\":1511,\"adm1_name\":\"West Bengal\"}]",
+        "GADM Admin Units": "[{\"gid_1\":\"IND.22_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Meghalaya\"},{\"gid_1\":\"IND.23_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Mizoram\"},{\"gid_1\":\"IND.26_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Odisha\"},{\"gid_1\":\"IND.33_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Tripura\"},{\"gid_1\":\"IND.36_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"West Bengal\"},{\"gid_1\":\"IND.4_1\",\"migration_date\":\"2025-12-20\",\"migration_method\":\"jaccard1\",\"name_1\":\"Assam\"}]",
+        "Entry Date": "2019-11-19",
+        "Last Update": "2025-12-20"
+      }
+    ],
+    "missing_counts": {
+      "DisNo.": 0,
+      "Historic": 0,
+      "Classification Key": 0,
+      "Disaster Group": 0,
+      "Disaster Subgroup": 0,
+      "Disaster Type": 0,
+      "Disaster Subtype": 0,
+      "External IDs": 322,
+      "Event Name": 373,
+      "ISO": 0,
+      "Country": 0,
+      "Subregion": 0,
+      "Region": 0,
+      "Location": 0,
+      "Origin": 227,
+      "Associated Types": 296,
+      "OFDA/BHA Response": 0,
+      "Appeal": 0,
+      "Declaration": 0,
+      "AID Contribution ('000 US$)": 413,
+      "Magnitude": 272,
+      "Magnitude Scale": 43,
+      "Latitude": 352,
+      "Longitude": 352,
+      "River Basin": 355,
+      "Start Year": 0,
+      "Start Month": 0,
+      "Start Day": 46,
+      "End Year": 0,
+      "End Month": 2,
+      "End Day": 46,
+      "Total Deaths": 30,
+      "No. Injured": 334,
+      "No. Affected": 199,
+      "No. Homeless": 384,
+      "Total Affected": 124,
+      "Reconstruction Costs ('000 US$)": 429,
+      "Reconstruction Costs, Adjusted ('000 US$)": 429,
+      "Insured Damage ('000 US$)": 412,
+      "Insured Damage, Adjusted ('000 US$)": 412,
+      "Total Damage ('000 US$)": 313,
+      "Total Damage, Adjusted ('000 US$)": 313,
+      "CPI": 0,
+      "Admin Units": 72,
+      "GADM Admin Units": 81,
+      "Entry Date": 0,
+      "Last Update": 0
+    },
+    "missing_pct": {
+      "DisNo.": 0.0,
+      "Historic": 0.0,
+      "Classification Key": 0.0,
+      "Disaster Group": 0.0,
+      "Disaster Subgroup": 0.0,
+      "Disaster Type": 0.0,
+      "Disaster Subtype": 0.0,
+      "External IDs": 75.05827505827506,
+      "Event Name": 86.94638694638695,
+      "ISO": 0.0,
+      "Country": 0.0,
+      "Subregion": 0.0,
+      "Region": 0.0,
+      "Location": 0.0,
+      "Origin": 52.91375291375291,
+      "Associated Types": 68.997668997669,
+      "OFDA/BHA Response": 0.0,
+      "Appeal": 0.0,
+      "Declaration": 0.0,
+      "AID Contribution ('000 US$)": 96.27039627039628,
+      "Magnitude": 63.4032634032634,
+      "Magnitude Scale": 10.023310023310025,
+      "Latitude": 82.05128205128204,
+      "Longitude": 82.05128205128204,
+      "River Basin": 82.75058275058275,
+      "Start Year": 0.0,
+      "Start Month": 0.0,
+      "Start Day": 10.722610722610723,
+      "End Year": 0.0,
+      "End Month": 0.4662004662004662,
+      "End Day": 10.722610722610723,
+      "Total Deaths": 6.993006993006993,
+      "No. Injured": 77.85547785547784,
+      "No. Affected": 46.386946386946384,
+      "No. Homeless": 89.5104895104895,
+      "Total Affected": 28.904428904428904,
+      "Reconstruction Costs ('000 US$)": 100.0,
+      "Reconstruction Costs, Adjusted ('000 US$)": 100.0,
+      "Insured Damage ('000 US$)": 96.03729603729604,
+      "Insured Damage, Adjusted ('000 US$)": 96.03729603729604,
+      "Total Damage ('000 US$)": 72.96037296037296,
+      "Total Damage, Adjusted ('000 US$)": 72.96037296037296,
+      "CPI": 0.0,
+      "Admin Units": 16.783216783216783,
+      "GADM Admin Units": 18.88111888111888,
+      "Entry Date": 0.0,
+      "Last Update": 0.0
+    },
+    "duplicate_count": 0,
+    "date_cols": [
+      "Start Year",
+      "Start Month",
+      "Start Day",
+      "End Year",
+      "End Month",
+      "End Day",
+      "Entry Date",
+      "Last Update"
+    ],
+    "min_date": "2023-09-25 00:00:00",
+    "max_date": "2026-03-12 00:00:00",
+    "temporal_resolution": "NOT CONFIRMED",
+    "lat_col": "Latitude",
+    "lon_col": "Longitude",
+    "geo_coverage": {
+      "lat_min": 3.295,
+      "lat_max": 36.5244,
+      "lon_min": 70.232,
+      "lon_max": 95.982
+    },
+    "unique_locations": 78,
+    "num_stats": {
+      "AID Contribution ('000 US$)": {
+        "count": 16.0,
+        "mean": 15495.0,
+        "std": 35714.696491313865,
+        "min": 12.0,
+        "25%": 582.5,
+        "50%": 2473.5,
+        "75%": 5524.0,
+        "max": 118929.0
+      },
+      "Magnitude": {
+        "count": 157.0,
+        "mean": 69254.88159235669,
+        "std": 121995.91318194637,
+        "min": -22.0,
+        "25%": 80.0,
+        "50%": 12680.0,
+        "75%": 75490.0,
+        "max": 629961.6
+      },
+      "Latitude": {
+        "count": 77.0,
+        "mean": 22.70125714285714,
+        "std": 7.281867838832153,
+        "min": 3.295,
+        "25%": 17.654,
+        "50%": 23.92,
+        "75%": 27.464,
+        "max": 36.5244
+      },
+      "Longitude": {
+        "count": 77.0,
+        "mean": 82.78864285714286,
+        "std": 7.6060206269948205,
+        "min": 70.232,
+        "25%": 76.61,
+        "50%": 81.38,
+        "75%": 89.79,
+        "max": 95.982
+      },
+      "Start Year": {
+        "count": 429.0,
+        "mean": 2011.913752913753,
+        "std": 7.574213641335988,
+        "min": 2000.0,
+        "25%": 2005.0,
+        "50%": 2012.0,
+        "75%": 2018.0,
+        "max": 2025.0
+      },
+      "Start Month": {
+        "count": 429.0,
+        "mean": 6.881118881118881,
+        "std": 2.7012185995861477,
+        "min": 1.0,
+        "25%": 5.0,
+        "50%": 7.0,
+        "75%": 9.0,
+        "max": 12.0
+      },
+      "Start Day": {
+        "count": 383.0,
+        "mean": 14.971279373368146,
+        "std": 9.027979207349953,
+        "min": 1.0,
+        "25%": 7.0,
+        "50%": 15.0,
+        "75%": 23.0,
+        "max": 31.0
+      },
+      "End Year": {
+        "count": 429.0,
+        "mean": 2011.9347319347319,
+        "std": 7.565009913171585,
+        "min": 2000.0,
+        "25%": 2005.0,
+        "50%": 2012.0,
+        "75%": 2018.0,
+        "max": 2025.0
+      },
+      "End Month": {
+        "count": 427.0,
+        "mean": 7.112412177985949,
+        "std": 2.736728202971671,
+        "min": 1.0,
+        "25%": 5.0,
+        "50%": 7.0,
+        "75%": 9.0,
+        "max": 12.0
+      },
+      "End Day": {
+        "count": 383.0,
+        "mean": 15.981723237597912,
+        "std": 8.825960052292784,
+        "min": 1.0,
+        "25%": 8.5,
+        "50%": 16.0,
+        "75%": 23.0,
+        "max": 31.0
+      },
+      "Total Deaths": {
+        "count": 399.0,
+        "mean": 231.66917293233084,
+        "std": 1347.5426064537285,
+        "min": 1.0,
+        "25%": 19.0,
+        "50%": 40.0,
+        "75%": 97.0,
+        "max": 20005.0
+      },
+      "No. Injured": {
+        "count": 95.0,
+        "mean": 2365.6105263157897,
+        "std": 17275.274349698033,
+        "min": 1.0,
+        "25%": 15.5,
+        "50%": 46.0,
+        "75%": 200.0,
+        "max": 166812.0
+      },
+      "No. Affected": {
+        "count": 230.0,
+        "mean": 4926013.156521739,
+        "std": 29799206.401203077,
+        "min": 5.0,
+        "25%": 7521.75,
+        "50%": 72250.0,
+        "75%": 1300000.0,
+        "max": 330000000.0
+      },
+      "No. Homeless": {
+        "count": 45.0,
+        "mean": 303816.8222222222,
+        "std": 768539.0598360895,
+        "min": 100.0,
+        "25%": 2000.0,
+        "50%": 5000.0,
+        "75%": 190645.0,
+        "max": 4000000.0
+      },
+      "Total Affected": {
+        "count": 305.0,
+        "mean": 3760260.7081967215,
+        "std": 25947703.676472135,
+        "min": 2.0,
+        "25%": 1074.0,
+        "50%": 25000.0,
+        "75%": 534035.0,
+        "max": 330000000.0
+      },
+      "Reconstruction Costs ('000 US$)": {
+        "count": 0.0,
+        "mean": NaN,
+        "std": NaN,
+        "min": NaN,
+        "25%": NaN,
+        "50%": NaN,
+        "75%": NaN,
+        "max": NaN
+      },
+      "Reconstruction Costs, Adjusted ('000 US$)": {
+        "count": 0.0,
+        "mean": NaN,
+        "std": NaN,
+        "min": NaN,
+        "25%": NaN,
+        "50%": NaN,
+        "75%": NaN,
+        "max": NaN
+      },
+      "Insured Damage ('000 US$)": {
+        "count": 17.0,
+        "mean": 313294.1176470588,
+        "std": 281627.3612208787,
+        "min": 5000.0,
+        "25%": 100000.0,
+        "50%": 200000.0,
+        "75%": 500000.0,
+        "max": 844000.0
+      },
+      "Insured Damage, Adjusted ('000 US$)": {
+        "count": 17.0,
+        "mean": 445334.9411764706,
+        "std": 406038.3675449388,
+        "min": 8522.0,
+        "25%": 143981.0,
+        "50%": 257170.0,
+        "75%": 690992.0,
+        "max": 1391354.0
+      },
+      "Total Damage ('000 US$)": {
+        "count": 116.0,
+        "mean": 1060497.9396551724,
+        "std": 2392580.9778568386,
+        "min": 416.0,
+        "25%": 50000.0,
+        "50%": 171000.0,
+        "75%": 913041.5,
+        "max": 16000000.0
+      },
+      "Total Damage, Adjusted ('000 US$)": {
+        "count": 116.0,
+        "mean": 1444442.5258620689,
+        "std": 3143306.196870784,
+        "min": 745.0,
+        "25%": 72448.0,
+        "50%": 260744.5,
+        "75%": 1302379.25,
+        "max": 21758767.0
+      },
+      "CPI": {
+        "count": 429.0,
+        "mean": 71.4830735085068,
+        "std": 12.763025427008108,
+        "min": 53.48773668167872,
+        "25%": 60.66033175273918,
+        "50%": 71.31508773357608,
+        "75%": 77.99726518795474,
+        "max": 100.0
+      }
+    },
+    "cat_counts": {
+      "DisNo.": "429 unique values (too many to list)",
+      "Historic": [
+        "No"
+      ],
+      "Classification Key": "28 unique values (too many to list)",
+      "Disaster Group": [
+        "Natural"
+      ],
+      "Disaster Subgroup": [
+        "Hydrological",
+        "Meteorological",
+        "Biological",
+        "Climatological",
+        "Geophysical"
+      ],
+      "Disaster Type": [
+        "Flood",
+        "Storm",
+        "Epidemic",
+        "Glacial lake outburst flood",
+        "Extreme temperature",
+        "Mass movement (wet)",
+        "Wildfire",
+        "Drought",
+        "Earthquake",
+        "Mass movement (dry)"
+      ],
+      "Disaster Subtype": "28 unique values (too many to list)",
+      "External IDs": "105 unique values (too many to list)",
+      "Event Name": "50 unique values (too many to list)",
+      "ISO": [
+        "IND"
+      ],
+      "Country": [
+        "India"
+      ],
+      "Subregion": [
+        "Southern Asia"
+      ],
+      "Region": [
+        "Asia"
+      ],
+      "Location": "389 unique values (too many to list)",
+      "Origin": "53 unique values (too many to list)",
+      "Associated Types": "32 unique values (too many to list)",
+      "OFDA/BHA Response": [
+        "No",
+        "Yes"
+      ],
+      "Appeal": [
+        "No"
+      ],
+      "Declaration": [
+        "No",
+        "Yes"
+      ],
+      "Magnitude Scale": [
+        "Km2",
+        "Kph",
+        "Vaccinated",
+        "\u00b0C",
+        "Moment Magnitude"
+      ],
+      "River Basin": "71 unique values (too many to list)",
+      "Admin Units": "302 unique values (too many to list)",
+      "GADM Admin Units": "290 unique values (too many to list)",
+      "Entry Date": "300 unique values (too many to list)",
+      "Last Update": "42 unique values (too many to list)"
+    }
+  }
+]

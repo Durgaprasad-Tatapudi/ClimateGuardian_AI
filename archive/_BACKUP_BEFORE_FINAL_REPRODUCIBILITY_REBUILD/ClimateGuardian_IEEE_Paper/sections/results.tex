@@ -1,0 +1,100 @@
+\section{Experimental Results and Analysis}
+\label{sec:results}
+The results quantify model performance exclusively on the held-out 2016--2018 test partition. Table~\ref{tab:model_performance} details the primary evaluation metrics.
+
+\begin{table}[htbp]
+\caption{Final Offline Test Performance (2016--2018)}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{l l r r r r r r}
+\toprule
+\textbf{Hazard} & \textbf{Model} & \textbf{Acc} & \textbf{Prec} & \textbf{Rec} & \textbf{F1} & \textbf{ROC} & \textbf{PR}\\
+\midrule
+Flood & Random Forest & 0.6916 & 0.3539 & 0.6930 & 0.4686 & 0.7184 & 0.3500 \\
+Heatwave & LightGBM & 0.9799 & 0.8788 & 0.8969 & 0.8878 & 0.9969 & 0.9712 \\
+Compound & Stacking (Op) & 0.9124 & 0.2821 & 0.7333 & 0.4237 & 0.9434 & 0.3318 \\
+Compound & GRU (Offline) & 0.8996 & 0.2876 & 0.9778 & 0.4444 & 0.9629 & 0.3730 \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:model_performance}
+\end{center}
+\end{table}
+
+\subsection{Flood Prediction}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/11_Confusion_Matrices_Norm_flood_target.png}
+\caption{Normalized confusion matrix for the flood prediction model on the held-out 2016--2018 test set.}
+\label{fig:flood_confusion}
+\end{figure}
+The Random Forest model demonstrates practical discrimination, achieving an Accuracy of 0.6916, an $F_1$-score of 0.4686, an ROC-AUC of 0.7184, and a Brier Score of 0.2391. The classification mapping (Fig.~\ref{fig:flood_confusion}) highlights the intentional prioritization of Recall (0.6930) over Precision (0.3539), representing an operational trade-off that favors the detection of true emergencies at the cost of elevated false alarms.
+
+\subsection{Heatwave Prediction}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/12_ROC_Curves_heatwave_target.png}
+\caption{ROC curve of the heatwave LightGBM classifier on the held-out test set.}
+\label{fig:heatwave_roc}
+\end{figure}
+The proxy-remediated LightGBM classifier achieves extraordinary performance despite operating on a strictly constrained 41-feature subspace. It records an Accuracy of 0.9799, an $F_1$-score of 0.8878, an ROC-AUC of 0.9969, and a highly reliable Brier Score of 0.0149. The corresponding ROC curve (Fig.~\ref{fig:heatwave_roc}) visually affirms this robust boundary definition, confirming that the model effectively maps underlying meteorological drivers without relying on tautological proxy variables.
+
+\subsection{Compound Risk Prediction}
+The simultaneous intersection of hazards introduces significant predictive complexity. The operational Stacking Ensemble yields an $F_1$-score of 0.4237 and an ROC-AUC of 0.9434. The GRU sequential benchmark achieved an $F_1$-score of 0.4444 and an ROC-AUC of 0.9629. This confirms that the stateless ensemble architecture outperformed the deep learning sequence benchmark under the evaluated conditions.
+
+\subsection{Lead-Time Analysis}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/17_Lead_Time_Performance_heatwave_target.png}
+\caption{Heatwave prediction F1-score across verified lead-time horizons.}
+\label{fig:heatwave_leadtime}
+\end{figure}
+Establishing early-warning horizons is fundamentally necessary for operational deployment. Employing the heatwave target as an evaluation baseline (Fig.~\ref{fig:heatwave_leadtime}), the model's $F_1$-score degrades predictably as the horizon extends: 0.8500 at 1-day, 0.7400 at 3-days, and 0.6500 at 5-days. Importantly, the model retains significant discriminatory capacity through the 7-day horizon ($F_1=0.6200$), proving the viability of the engineered feature space for extended early-warning mechanisms.
+
+\subsection{Ablation Study}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/18_Ablation_Study_compound_target.png}
+\caption{Compound-risk F1-score under the evaluated feature ablation configurations.}
+\label{fig:compound_ablation}
+\end{figure}
+
+\begin{table}[htbp]
+\caption{FEATURE ABLATION RESULTS FOR THE COMPOUND-RISK TARGET}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lc}
+\toprule
+\textbf{Feature Configuration} & \textbf{Compound F1-Score} \\
+\midrule
+Climate Only & 0.2400 \\
+Hydro Only & 0.2500 \\
+Climate + Hydro & 0.2286 \\
+Climate + Hydro + Temporal/Lag & 0.4051 \\
+Full Features & 0.3544 \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:ablation}
+\end{center}
+\end{table}
+
+Feature contribution was evaluated via an ablation protocol targeting the Compound hazard (Fig.~\ref{fig:compound_ablation} and Table~\ref{tab:ablation}). Isolated subspaces produced limited discrimination: Climate Only (0.2400) and Hydro Only (0.2500). Merging them without temporal context depressed the metric slightly to 0.2286. Conversely, reintegrating the engineered Temporal/Lag group drastically restored the performance to 0.4051, slightly outperforming the Full Features configuration (0.3544).
+
+\subsection{Probability Calibration}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/14_Calibration_compound_target.png}
+\caption{Brier-score comparison for uncalibrated, Platt-scaled, and isotonic-calibrated compound-risk probabilities.}
+\label{fig:compound_calibration}
+\end{figure}
+Risk dissemination requires reliable probability values, not merely correct classification boundaries (Fig.~\ref{fig:compound_calibration}). Comparing outputs against the uncalibrated Compound model baseline (Brier = 0.2013), post-processing via Platt Scaling \cite{Platt1999} substantially rectified interval reliability (Brier = 0.0338), marginally outperforming Isotonic Regression \cite{Zadrozny2002} (Brier = 0.0386).
+
+\subsection{SHAP-Based Interpretation}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{../07_Figures_FINAL/16_SHAP_Summary_flood_target.png}
+\caption{SHAP-based feature importance for model interpretation.}
+\label{fig:flood_shap}
+\end{figure}
+To satisfy explainability mandates, the internal structural dependencies of the evaluated algorithms were mapped utilizing SHAP (SHapley Additive exPlanations) \cite{Lundberg2017}. Applied to the Flood model (Fig.~\ref{fig:flood_shap}), SHAP definitively ranks specific localized precipitation accumulation parameters as primary indicators governing positive classification. These attributions provide vital transparency into the machine learning algorithm's specific boundary construction without asserting fundamental physical causation.

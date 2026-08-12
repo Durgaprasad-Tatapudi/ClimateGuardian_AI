@@ -1,0 +1,53 @@
+\section{Machine Learning Methodology}
+\label{sec:methodology}
+
+\subsection{Chronological Dataset Partitioning}
+To simulate real-world deployment constraints, the evaluation strictly prohibits randomized shuffling, which inherently leaks future temporal correlations into the training distribution. A deterministic chronological split was enforced (Table~\ref{tab:split}). 
+
+\begin{table}[htbp]
+\caption{Chronological Dataset Partition}
+\begin{center}
+\begin{tabular}{lrrl}
+\toprule
+\textbf{Subset} & \textbf{Period} & \textbf{Samples} & \textbf{Role} \\
+\midrule
+Training & 2000--2012 & 4749 & Model fitting \\
+Validation & 2013--2015 & 1095 & Model selection/calibration \\
+Test & 2016--2018 & 1096 & Final evaluation \\
+\bottomrule
+\end{tabular}
+\label{tab:split}
+\end{center}
+\end{table}
+
+\subsection{Leakage-Aware Preprocessing}
+Consistent with best practices \cite{Kaufman2012}, global standardization scaling and missing-value imputation were completely avoided. All mean parameters and scaler artifacts were fitted exclusively on the 4,749 training samples (2000--2012). These frozen objects were subsequently applied to the validation and test splits, guaranteeing zero temporal contamination. An extensive initial audit revealed that the heatwave target definition leaked via four specific proxy variables (\texttt{temperature\_max}, \texttt{temperature\_max\_lag1}, \texttt{hw\_rolling}, \texttt{hw\_exceed}). These were explicitly removed, forcing the Heatwave model to evaluate a restricted, safe 41-feature subspace.
+
+\subsection{Flood Prediction Model}
+Flood-risk discrimination utilizes a Random Forest classifier \cite{Breiman2001} comprising 100 estimators, limited to a maximum depth of 5 to enforce generalizability. The algorithm applies balanced class weights to offset the natural hazard imbalance, heavily prioritizing recall sensitivity over precision optimization.
+
+\subsection{Heatwave Prediction Model}
+The Heatwave hazard relies on a LightGBM architecture \cite{Ke2017} evaluating the restricted 41-feature space. The model leverages histogram-based node splitting, a learning rate of 0.1, and an unconstrained maximum depth, stabilized by scale-pos-weight adjustments to manage the extreme rarity of heatwave classifications.
+
+\subsection{Compound Risk Stacking Model}
+Operationalizing Compound risk prediction utilizes a Logistic Regression Stacking Ensemble \cite{Wolpert1992}. Base LightGBM and XGBoost \cite{Chen2016} models independently evaluate the instantaneous feature array $x_t$. 
+\begin{equation}
+\begin{aligned}
+p_{XGB} &= \text{XGBoost}(x_t) \\
+p_{LGBM} &= \text{LightGBM}(x_t)
+\end{aligned}
+\end{equation}
+These intermediate probabilities form a meta-feature vector $z_t = [p_{XGB}, p_{LGBM}]^T$, which a meta-learner subsequently maps to the final prediction:
+\begin{equation}
+p_{compound} = \text{LogisticRegression}(z_t)
+\end{equation}
+
+\subsection{GRU Offline Benchmark}
+A PyTorch Gated Recurrent Unit (GRU) \cite{Cho2014} serves as the theoretical offline sequence benchmark. Configured with a sequence length of 14, a 32-unit hidden dimension, and dropout at 0.2, the GRU ingests temporal tensors structured as $(N, 14, 45)$. The model was optimized using Adam with a learning rate of 0.01 and \texttt{BCEWithLogitsLoss}. 
+
+\subsection{Evaluation Metrics}
+Due to the highly skewed hazard distributions (Table~\ref{tab:dataset}), traditional accuracy is uninformative \cite{He2009}. The framework heavily relies on Precision, Recall, and the $F_1$-score:
+\begin{equation}
+    F_1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+Threshold-independent metrics including the Area Under the Receiver Operating Characteristic Curve (ROC-AUC) and the Precision-Recall Curve (PR-AUC) comprehensively measure underlying discrimination. The Brier Score quantifies the calibration quality of the raw probability outputs.

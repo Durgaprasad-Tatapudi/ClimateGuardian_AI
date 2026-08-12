@@ -1,0 +1,5 @@
+Realtime execution verified separately via command line execution against Open-Meteo REST API.
+Tested locations:
+- Latitude = 17.0000, Longitude = 81.8000
+- Latitude = 16.5062, Longitude = 80.6480
+These outputs represent successful realtime inference validation, NOT historical accuracy.

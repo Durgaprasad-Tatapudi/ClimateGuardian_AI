@@ -1,0 +1,42 @@
+# ClimateGuardian AI Project Configuration
+
+project:
+  name: "ClimateGuardian_AI"
+  description: "Machine Learning-Based Compound Flood-Heatwave Prediction and Real-Time Risk Assessment for India"
+  seed: 42
+
+paths:
+  raw_data: "01_Raw_Datasets"
+  processed_data: "02_Processed_Data"
+  features: "03_Features"
+  labels: "04_Labels"
+  models: "05_Models"
+  results: "06_Results"
+  figures: "07_Figures"
+  reports: "08_Reports"
+
+model:
+  forecast_horizons_days: [1, 3, 7]
+  sequence_length_days: 14  # DL models lookback window
+  
+  hyperparameters:
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+    xgboost:
+      n_estimators: 100
+      learning_rate: 0.1
+    lstm:
+      hidden_size: 64
+      num_layers: 2
+      dropout: 0.2
+      batch_size: 32
+      early_stopping_patience: 5
+
+targets:
+  flood_threshold: "TBD based on historical event distribution"
+  heatwave_threshold_celsius: 40.0 # Will be adjusted per local climatology (e.g. 90th percentile)
+
+open_meteo:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+  variables: ["temperature_2m", "relative_humidity_2m", "precipitation", "wind_speed_10m"]

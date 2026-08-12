@@ -1,0 +1,45 @@
+# Leakage Audit
+## Leakage Audit
+All features represent conditions at or before time $t$. No future data is used. Anomalies use baseline stats from the train period (2000-2014).
+
+- **rainfall**: Derived using only historical/current data. Valid.
+- **rainfall_3d**: Derived using only historical/current data. Valid.
+- **rainfall_5d**: Derived using only historical/current data. Valid.
+- **rainfall_7d**: Derived using only historical/current data. Valid.
+- **rainfall_14d**: Derived using only historical/current data. Valid.
+- **runoff**: Derived using only historical/current data. Valid.
+- **surface_runoff**: Derived using only historical/current data. Valid.
+- **runoff_3d**: Derived using only historical/current data. Valid.
+- **runoff_7d**: Derived using only historical/current data. Valid.
+- **soil_moisture_layer_1**: Derived using only historical/current data. Valid.
+- **soil_moisture_rolling_7d**: Derived using only historical/current data. Valid.
+- **soil_moisture_anomaly**: Derived using only historical/current data. Valid.
+- **temperature_avg**: Derived using only historical/current data. Valid.
+- **temperature_min**: Derived using only historical/current data. Valid.
+- **temperature_max**: Derived using only historical/current data. Valid.
+- **rolling_temperature_3d**: Derived using only historical/current data. Valid.
+- **temperature_anomaly**: Derived using only historical/current data. Valid.
+- **dewpoint**: Derived using only historical/current data. Valid.
+- **dewpoint_min**: Derived using only historical/current data. Valid.
+- **dewpoint_max**: Derived using only historical/current data. Valid.
+- **surface_pressure**: Derived using only historical/current data. Valid.
+- **pressure_anomaly**: Derived using only historical/current data. Valid.
+- **u_component**: Derived using only historical/current data. Valid.
+- **v_component**: Derived using only historical/current data. Valid.
+- **wind_speed**: Derived using only historical/current data. Valid.
+- **total_evaporation**: Derived using only historical/current data. Valid.
+- **rainfall_lag1**: Derived using only historical/current data. Valid.
+- **rainfall_lag2**: Derived using only historical/current data. Valid.
+- **rainfall_lag3**: Derived using only historical/current data. Valid.
+- **runoff_lag1**: Derived using only historical/current data. Valid.
+- **runoff_lag2**: Derived using only historical/current data. Valid.
+- **runoff_lag3**: Derived using only historical/current data. Valid.
+- **temperature_max_lag1**: Derived using only historical/current data. Valid.
+- **temperature_max_lag2**: Derived using only historical/current data. Valid.
+- **temperature_max_lag3**: Derived using only historical/current data. Valid.
+- **surface_pressure_lag1**: Derived using only historical/current data. Valid.
+- **surface_pressure_lag2**: Derived using only historical/current data. Valid.
+- **surface_pressure_lag3**: Derived using only historical/current data. Valid.
+- **soil_moisture_layer_1_lag1**: Derived using only historical/current data. Valid.
+- **soil_moisture_layer_1_lag2**: Derived using only historical/current data. Valid.
+- **soil_moisture_layer_1_lag3**: Derived using only historical/current data. Valid.

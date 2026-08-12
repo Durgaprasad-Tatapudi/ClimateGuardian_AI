@@ -1,0 +1,54 @@
+Artifact: RF_flood_target.joblib
+Algorithm: RandomForest
+Target: Flood
+Input Feature Count: 45
+Status: Operational
+
+Artifact: LGBM_heatwave_target.joblib
+Algorithm: LightGBM
+Target: Heatwave
+Input Feature Count: 41
+Status: Operational
+
+Artifact: XGB_compound_target.joblib
+Algorithm: XGBoost
+Target: Compound
+Input Feature Count: 45
+Status: Operational (Base)
+
+Artifact: LGBM_compound_target.joblib
+Algorithm: LightGBM
+Target: Compound
+Input Feature Count: 45
+Status: Operational (Base)
+
+Artifact: LR_compound_target.joblib
+Algorithm: LogisticRegression
+Target: Compound
+Input Feature Count: 45
+Status: Offline
+
+Artifact: LR_meta_compound_target.joblib
+Algorithm: LogisticRegression
+Target: Compound
+Input Feature Count: 2
+Status: Operational (Meta)
+
+Artifact: scaler.joblib
+Algorithm: StandardScaler
+Target: All
+Input Feature Count: 45
+Status: Operational
+
+Artifact: feature_cols.joblib
+Algorithm: Feature List
+Target: All
+Input Feature Count: 45
+Status: Operational
+
+Artifact: imputation_means.joblib
+Algorithm: Means
+Target: All
+Input Feature Count: 45
+Status: Operational
+

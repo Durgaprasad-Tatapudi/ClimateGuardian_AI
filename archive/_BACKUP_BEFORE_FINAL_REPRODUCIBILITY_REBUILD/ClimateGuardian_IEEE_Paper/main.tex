@@ -1,0 +1,70 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{url}
+
+\begin{document}
+
+\title{ClimateGuardian AI: A Hybrid Machine Learning and Deep Learning Framework for Real-Time Multi-Hazard Climate Risk Prediction Using Open-Meteo Data}
+
+\author{
+\IEEEauthorblockN{Author 1}
+\IEEEauthorblockA{\textit{Designation} \\
+\textit{Department}\\
+Specialization/Program\\
+Institution\\
+City, State, Country \\
+Email}
+\and
+\IEEEauthorblockN{Author 2}
+\IEEEauthorblockA{\textit{Designation} \\
+\textit{Department}\\
+Specialization/Program\\
+Institution\\
+City, State, Country \\
+Email}
+\and
+\IEEEauthorblockN{Author 3}
+\IEEEauthorblockA{\textit{Designation} \\
+\textit{Department}\\
+Specialization/Program\\
+Institution\\
+City, State, Country \\
+Email}
+\and
+\IEEEauthorblockN{Author 4}
+\IEEEauthorblockA{\textit{Designation} \\
+\textit{Department}\\
+Specialization/Program\\
+Institution\\
+City, State, Country \\
+Email}
+}
+
+\maketitle
+
+\begin{abstract}
+Rising frequencies of climate-driven extreme weather events necessitate robust, multi-hazard early warning systems. However, operational deployment is frequently hindered by complex stateful sequence models and target-proxy data leakage during evaluation. This study proposes ClimateGuardian AI, a hybrid machine learning and deep learning framework for the real-time prediction of flood, heatwave, and compound climate risks. Operating on a 45-feature historical hydro-climatic dataset (2000--2018, 6,940 daily records), the framework engineers temporal and lagged variables to contextualize instantaneous environmental conditions. To ensure rigorous evaluation, we employ strict chronological partitioning and leakage-aware train-only preprocessing. Hazard-specific algorithms include a Random Forest for flood risk ($F_1=0.4686$), a proxy-remediated LightGBM for heatwave risk ($F_1=0.8878$), and a Logistic Regression stacking ensemble combining XGBoost and LightGBM bases for operational compound risk ($F_1=0.3419$). An offline Gated Recurrent Unit (GRU) sequence benchmark evaluates temporal capacity ($F_1=0.4343$). Comprehensive evaluation incorporates threshold-independent discrimination, probability calibration, extended lead-time analysis, feature ablation, and SHAP-based interpretability. Finally, the framework demonstrates end-to-end stateless operational inference natively integrated with live Open-Meteo weather data.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Climate risk prediction, flood prediction, heatwave prediction, compound hazards, machine learning, deep learning, Open-Meteo, real-time inference, explainable AI.
+\end{IEEEkeywords}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/framework}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/realtime}
+\input{sections/discussion}
+\input{sections/limitations}
+\input{sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

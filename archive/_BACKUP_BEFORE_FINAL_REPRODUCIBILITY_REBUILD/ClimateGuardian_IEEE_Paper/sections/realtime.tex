@@ -1,0 +1,30 @@
+\section{Real-Time Operational Inference}
+\label{sec:realtime}
+\subsection{Live Feature Construction}
+Bridging the divide between historical test results and live deployment requires identical feature structuring. The ClimateGuardian AI operational pipeline connects directly to the Open-Meteo REST API, acquiring instantaneous high-resolution observations matching the original 45-feature parameters. The system algorithmically calculates necessary running windows, lag values, and standardized anomaly indicators dynamically based on the current payload without requiring external database lookups. 
+
+\subsection{Stateless Model Inference}
+The core constraint defining the operational selection is stateless feasibility. The Stacking Ensemble ($F_1 = 0.4237$) not only demonstrates superior predictive performance over the GRU benchmark (Table~\ref{tab:model_performance}), but also avoids the significant architectural bottleneck of maintaining a mandatory 14-day sequence input buffer during live execution. Therefore, it is explicitly retained as the operational framework choice (Table~\ref{tab:op_selection}).
+
+\begin{table}[htbp]
+\caption{Operational Model Selection}
+\begin{center}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lll}
+\toprule
+\textbf{Hazard} & \textbf{Model} & \textbf{Deployment Status} \\
+\midrule
+Flood & Random Forest & Operational \\
+Heatwave & LightGBM & Operational \\
+Compound & Stacking Ensemble & Operational \\
+Compound & GRU & Offline benchmark only \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:op_selection}
+\end{center}
+\end{table}
+ Its point-in-time stateless architecture ensures instantaneous classification upon receiving the single daily feature vector.
+
+\subsection{Risk-Level Generation}
+The operational pipeline generates standardized probability scores for Flood, Heatwave, and Compound hazards simultaneously. These calibrated probabilities drive the logic for external decision-making, completing the end-to-end translation of raw environmental API data into actionable, multi-hazard early-warning intelligence.

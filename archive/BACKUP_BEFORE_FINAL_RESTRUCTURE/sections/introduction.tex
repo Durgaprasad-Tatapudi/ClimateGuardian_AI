@@ -1,0 +1,25 @@
+\section{Introduction}
+\label{sec:intro}
+
+The accelerating frequency and severity of extreme weather events present unprecedented risks to global ecosystems and socio-economic infrastructures \cite{IPCC2021}. As climate patterns shift, historical weather norms increasingly fail to capture the distribution and intensity of modern climatic anomalies. Consequently, the development of robust early-warning systems has become a critical priority for proactive adaptation and disaster risk mitigation \cite{Zscheischler2018}. Providing actionable forecasting requires analyzing vast streams of environmental data to anticipate hazards before they materialize.
+
+Modeling isolated hydro-climatic hazards, such as floods and heatwaves, presents profound analytical challenges. These phenomena are governed by highly non-linear atmospheric and terrestrial interactions, extreme environmental variability, and complex temporal dependencies \cite{Mosavi2018}. Furthermore, extreme events are inherently rare, introducing significant class imbalance that complicates traditional statistical modeling \cite{He2009}. Identifying the precursor patterns of these events requires integrating diverse interacting climate and hydrological variables.
+
+Beyond isolated events, climate risks increasingly manifest as compound hazards. Compound extreme events occur when multiple environmental drivers coincide or interact, amplifying the overall impact beyond what independent hazard assessments might predict \cite{Zscheischler2020}. Accurately predicting compound states requires recognizing the non-linear synergy between distinct climatic mechanisms. In this study, compound risk is operationalized through the project's compound target definition, mapping the intersections of simultaneous threshold exceedances.
+
+Machine learning has emerged as a powerful paradigm for addressing these non-linear predictive challenges. Tree-based architectures, including Random Forest \cite{Breiman2001} and gradient boosting algorithms such as XGBoost \cite{Chen2016} and LightGBM \cite{Ke2017}, provide strong capabilities for mapping tabular environmental data. Concurrently, recurrent sequence models like the Gated Recurrent Unit (GRU) \cite{Cho2014} inherently capture temporal sequences vital for climate modeling. However, adapting these established algorithms for rigorous real-world deployment remains challenging.
+
+A critical challenge in predictive climate modeling is the risk of data leakage during evaluation. Standard randomized train-test splits often inadvertently expose models to future information due to temporal autocorrelation, undermining their true predictive capacity \cite{Kaufman2012}. To ensure methodological integrity, this study employs strict chronological partitioning (Train: 2000--2012, Validation: 2013--2015, Test: 2016--2018) and restricts all preprocessing statistics exclusively to the training subset.
+
+Furthermore, a significant operational gap exists between historical sequence modeling and live-system deployment. While sequence models like the GRU excel at capturing temporal context \cite{Kratzert2018}, they require continuous sequential inputs. Maintaining recurrent 14-day data buffers during individual live requests introduces high systemic latency. The operational architecture was designed to avoid maintaining a recurrent 14-day input buffer during individual inference requests, prioritizing stateless evaluation frameworks.
+
+Addressing these challenges, the ClimateGuardian AI framework provides the following demonstrated contributions:
+\begin{enumerate}
+    \item Multi-hazard hydro-climate feature integration for flood, heatwave, and compound prediction.
+    \item Leakage-aware chronological evaluation avoiding temporal data contamination.
+    \item Explicit removal of deterministic proxy features to prevent target-leakage in heatwave forecasting.
+    \item Comparative evaluation of stateless tree-based ensembles and stateful sequence models.
+    \item Selection of an operational stateless stacking architecture \cite{Wolpert1992} prioritizing real-time inference latency over offline theoretical maximums.
+    \item Realtime prediction integration utilizing live data from the Open-Meteo REST API \cite{OpenMeteo2023}.
+    \item Rigorous post-hoc analysis including probability calibration, SHAP interpretability \cite{Lundberg2017}, lead-time profiling, and feature ablation.
+\end{enumerate}

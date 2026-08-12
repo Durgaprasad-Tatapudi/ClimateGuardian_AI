@@ -1,0 +1,8 @@
+python -m pytest -v
+=> 10 passed
+
+python -m pytest -v -W error
+=> 10 passed
+
+python -m pip check
+=> No broken requirements found

@@ -1,0 +1,7 @@
+\section{Discussion}
+\label{sec:discussion}
+The experimental results demonstrate that machine learning architectures, when rigorously evaluated within chronologically constrained boundaries, can successfully untangle complex hydro-climatic dynamics. The deliberate removal of heatwave proxy features validated that models like LightGBM can achieve formidable baseline discrimination independent of trivial indicators. 
+
+Furthermore, the ablation study explicitly confirms that instantaneous observations provide insufficient meteorological context. The substantial improvement derived from integrating temporal and lag metrics underscores that predictive capacity relies inherently upon understanding short-term accumulation and immediate environmental derivatives. 
+
+Crucially, the disparity between the offline GRU and the operational Stacking Ensemble highlights a persistent tension in applied climate modeling: the trade-off between absolute temporal sequence capacity and live architectural deployment latency. The ClimateGuardian AI framework successfully navigates this constraint by isolating the sequence architecture as an offline diagnostic benchmark while structurally aligning the realtime inference pipeline entirely around stateless, point-in-time methodologies.

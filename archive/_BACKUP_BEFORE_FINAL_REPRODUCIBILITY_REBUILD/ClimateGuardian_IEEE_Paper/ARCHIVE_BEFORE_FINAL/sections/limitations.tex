@@ -1,0 +1,5 @@
+\section{Limitations and Future Work}
+\label{sec:limitations}
+While demonstrating substantial operational capabilities, the current framework is constrained by specific architectural and data limitations. Fundamentally, the dataset represents a specific localized geographic climate topology spanning an 18-year historical window; applying these identical fitted models globally without localized retraining would inherently skew probabilities. 
+
+Additionally, forcing the operational compound model to utilize a stateless stacking architecture sacrifices the superior temporal interaction capability inherent to the deep learning GRU sequence model. Future research should prioritize investigating hybrid deployment architectures capable of securely persisting recurrent sequence buffers directly inside the inference pipeline without inducing live API latency. Spatial extensions utilizing Graph Neural Networks (GNN) over gridded, regional datasets would also fundamentally advance the methodology beyond point-based early warning thresholds.

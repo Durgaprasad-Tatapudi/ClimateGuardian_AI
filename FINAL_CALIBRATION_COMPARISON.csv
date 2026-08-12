@@ -1,0 +1,10 @@
+Target,Method,Brier
+flood_target,Uncalibrated,0.22304765729120726
+flood_target,Platt Scaling,0.20535346274310015
+flood_target,Isotonic Regression,0.23802631936768887
+heatwave_target,Uncalibrated,0.00039720674508205686
+heatwave_target,Platt Scaling,0.0012286142192863244
+heatwave_target,Isotonic Regression,0.0003865235820284722
+compound_target,Uncalibrated,0.19326058891207912
+compound_target,Platt Scaling,0.033911858268452964
+compound_target,Isotonic Regression,0.041123889115317606

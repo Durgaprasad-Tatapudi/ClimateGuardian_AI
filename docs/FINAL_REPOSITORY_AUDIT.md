@@ -1,0 +1,25 @@
+# Final Repository Audit
+
+- **Repository Name**: ClimateGuardian_AI
+- **Remote URL**: https://github.com/Durgaprasad-Tatapudi/ClimateGuardian_AI.git
+- **Final Branch**: master
+- **Commit Hash**: <commit-hash-pending>
+- **Canonical Experiment**: 1.0_leakage_free
+- **Dataset Information**: `data/processed/climate_features.csv` and `data/processed/flood_features.csv` (engineered from raw inputs)
+- **Train/Validation/Test Split**: 2000-2012 / 2013-2015 / 2016-2018
+- **Models**: LogisticRegression, RandomForest, LightGBM, XGBoost, StackingEnsemble, GRU
+- **Seeds**: numpy: 42, pandas: 42, sklearn: 42
+- **Canonical Result Files**: 
+  - `MODEL_RESULTS.csv`
+  - `ABLATION_RESULTS.csv`
+  - `CALIBRATION_RESULTS.csv`
+  - `LEAD_TIME_RESULTS.csv`
+- **Canonical Figure Files**: Located in `Paper_Figures/`
+- **Paper Source**: Located in `paper/`
+- **Dependencies**: Locked in `requirements.txt`
+- **Verification Commands**: 
+  - `python scripts/verify_reproducibility.py`
+  - `python scripts/verify_paper_consistency.py`
+- **Security Audit**: `.env` and `secrets/` excluded. No API keys committed.
+- **Git Audit**: PASS
+- **Final Push Status**: PENDING

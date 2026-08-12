@@ -1,0 +1,106 @@
+\relax 
+\citation{IPCC2021}
+\citation{Zscheischler2020}
+\citation{Kratzert2018}
+\citation{Mosavi2018}
+\citation{Ke2017}
+\citation{Chen2016}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\newlabel{sec:intro}{{I}{1}{}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}{}\protected@file@percent }
+\newlabel{sec:related_work}{{II}{1}{}{section.2}{}}
+\citation{Zscheischler2018}
+\citation{Chattopadhyay2020}
+\citation{Cho2014}
+\citation{OpenMeteo2023}
+\citation{Kaufman2012}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Proposed ClimateGuardian AI Framework}{2}{}\protected@file@percent }
+\newlabel{sec:framework}{{III}{2}{}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}System Overview}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Data Sources}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Dataset Statistics (2000--2018)}}{2}{}\protected@file@percent }
+\newlabel{tab:dataset}{{I}{2}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Feature Engineering}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Multi-Hazard Target Formulation}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Real-Time Open-Meteo Data Integration}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Machine Learning Methodology}{2}{}\protected@file@percent }
+\newlabel{sec:methodology}{{IV}{2}{}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Chronological Dataset Partitioning}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Chronological Dataset Partition}}{2}{}\protected@file@percent }
+\newlabel{tab:split}{{II}{2}{}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Leakage-Aware Preprocessing}{2}{}\protected@file@percent }
+\citation{Breiman2001}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Architecture of the ClimateGuardian AI framework showing the offline scientific evaluation pipeline and stateless realtime inference path.}}{3}{}\protected@file@percent }
+\newlabel{fig:system_architecture}{{1}{3}{}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Flood Prediction Model}{3}{}\protected@file@percent }
+\citation{Ke2017}
+\citation{Wolpert1992}
+\citation{Chen2016}
+\citation{Cho2014}
+\citation{He2009}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Heatwave Prediction Model}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Compound Risk Stacking Model}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}GRU Offline Benchmark}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-G}}Evaluation Metrics}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Results and Analysis}{4}{}\protected@file@percent }
+\newlabel{sec:results}{{V}{4}{}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Flood Prediction}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Final Offline Test Performance (2016--2018)}}{4}{}\protected@file@percent }
+\newlabel{tab:model_performance}{{III}{4}{}{table.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Normalized confusion matrix for the flood prediction model on the held-out 2016--2018 test set.}}{4}{}\protected@file@percent }
+\newlabel{fig:flood_confusion}{{2}{4}{}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces ROC curve of the heatwave LightGBM classifier on the held-out test set.}}{4}{}\protected@file@percent }
+\newlabel{fig:heatwave_roc}{{3}{4}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Heatwave Prediction}{4}{}\protected@file@percent }
+\citation{Platt1999}
+\citation{Zadrozny2002}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heatwave prediction F1-score across verified lead-time horizons.}}{5}{}\protected@file@percent }
+\newlabel{fig:heatwave_leadtime}{{4}{5}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Compound Risk Prediction}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Lead-Time Analysis}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Ablation Study}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces FEATURE ABLATION RESULTS FOR THE COMPOUND-RISK TARGET}}{5}{}\protected@file@percent }
+\newlabel{tab:ablation}{{IV}{5}{}{table.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Compound-risk F1-score under the evaluated feature ablation configurations.}}{5}{}\protected@file@percent }
+\newlabel{fig:compound_ablation}{{5}{5}{}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Brier-score comparison for uncalibrated, Platt-scaled, and isotonic-calibrated compound-risk probabilities.}}{5}{}\protected@file@percent }
+\newlabel{fig:compound_calibration}{{6}{5}{}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Probability Calibration}{5}{}\protected@file@percent }
+\citation{Lundberg2017}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces SHAP-based feature importance for model interpretation.}}{6}{}\protected@file@percent }
+\newlabel{fig:flood_shap}{{7}{6}{}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-G}}SHAP-Based Interpretation}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Real-Time Operational Inference}{6}{}\protected@file@percent }
+\newlabel{sec:realtime}{{VI}{6}{}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Live Feature Construction}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Stateless Model Inference}{6}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Operational Model Selection}}{6}{}\protected@file@percent }
+\newlabel{tab:op_selection}{{V}{6}{}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Risk-Level Generation}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Discussion}{6}{}\protected@file@percent }
+\newlabel{sec:discussion}{{VII}{6}{}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Limitations and Future Work}{6}{}\protected@file@percent }
+\newlabel{sec:limitations}{{VIII}{6}{}{section.8}{}}
+\bibstyle{IEEEtran}
+\bibdata{references}
+\bibcite{IPCC2021}{1}
+\bibcite{Zscheischler2020}{2}
+\bibcite{Kratzert2018}{3}
+\bibcite{Mosavi2018}{4}
+\bibcite{Ke2017}{5}
+\bibcite{Chen2016}{6}
+\bibcite{Zscheischler2018}{7}
+\bibcite{Chattopadhyay2020}{8}
+\bibcite{Cho2014}{9}
+\bibcite{OpenMeteo2023}{10}
+\bibcite{Kaufman2012}{11}
+\bibcite{Breiman2001}{12}
+\bibcite{Wolpert1992}{13}
+\bibcite{He2009}{14}
+\bibcite{Platt1999}{15}
+\bibcite{Zadrozny2002}{16}
+\bibcite{Lundberg2017}{17}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{7}{}\protected@file@percent }
+\newlabel{sec:conclusion}{{IX}{7}{}{section.9}{}}
+\@writefile{toc}{\contentsline {section}{References}{7}{}\protected@file@percent }
+\gdef \@abspage@last{7}

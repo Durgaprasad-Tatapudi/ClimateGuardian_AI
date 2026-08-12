@@ -1,0 +1,18 @@
+# Data Cleaning Report
+- Dropped `.geo` from runoff as it is constant/empty MultiPoint.
+- Dropped `system:index` from runoff as it's redundant to date.
+- Dropped `.geo` from soil_moisture as it is constant/empty MultiPoint.
+- Dropped `system:index` from soil_moisture as it's redundant to date.
+- Dropped `.geo` from humidity as it is constant/empty MultiPoint.
+- Dropped `system:index` from humidity as it's redundant to date.
+- Dropped `.geo` from pressure as it is constant/empty MultiPoint.
+- Dropped `system:index` from pressure as it's redundant to date.
+- Dropped `.geo` from evaporation as it is constant/empty MultiPoint.
+- Dropped `system:index` from evaporation as it's redundant to date.
+- Dropped `.geo` from wind as it is constant/empty MultiPoint.
+- Dropped `system:index` from wind as it's redundant to date.
+- Replaced `-999` with `NaN` in NASA_POWER_India_Recent_2019_2025.csv.
+- Replaced `-999` with `NaN` in POWER_Point_Daily.
+- Constructed standard calendar `date` from `YEAR` and `DOY` in NASA Point dataset.
+- Filtered GFD events for India (Retained 142 out of 142 events).
+- Extracted `start_date` and `end_date` from `system:index` for GFD events.

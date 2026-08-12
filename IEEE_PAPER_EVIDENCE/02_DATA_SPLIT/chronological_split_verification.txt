@@ -1,0 +1,13 @@
+Train:
+2000-2012
+4749 samples
+
+Validation:
+2013-2015
+1095 samples
+
+Test:
+2016-2018
+1096 samples
+
+Status: VERIFIED that the 2016-2018 test period is strictly excluded from model fitting and meta-learner fitting.

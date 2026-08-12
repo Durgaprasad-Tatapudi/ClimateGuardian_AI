@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering
+\caption{Operational Model Selection}
+\label{tab:operational}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Target} & \textbf{Model} & \textbf{Rationale} \\
+\midrule
+Flood & RandomForest & Strong baseline \\
+Heatwave & LightGBM & Restricted leakage-free \\
+Compound & Stacking Ensemble & Stateless O(1) inference \\
+\bottomrule
+\end{tabular}
+\end{table}

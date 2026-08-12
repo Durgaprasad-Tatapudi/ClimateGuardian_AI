@@ -1,0 +1,50 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Project-specific ignores
+# We ONLY ignore the future experiment runs so we don't accidentally push them.
+# The canonical results must BE TRACKED!
+results/experiment_runs/*
+!results/experiment_runs/.gitkeep
+
+# IDEs and Tools
+.idea/
+.vscode/
+*.swp
+*.swo
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Temporary and local config
+scratch/
+secrets/
+*.pem
+*.key
+local_*.json
+
+# Data
+# We do NOT ignore data if the user said "If legally and technically appropriate, include the dataset."
+# The processed data files are small enough to be tracked. But we can ignore massive raw downloads.
+data/raw/*
+!data/raw/.gitkeep
+
+# Compiled paper
+paper/*.pdf
+paper/*.log
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz

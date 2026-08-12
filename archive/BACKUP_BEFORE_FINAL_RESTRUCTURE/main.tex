@@ -1,0 +1,59 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{url}
+
+\begin{document}
+
+\title{ClimateGuardian AI: A Leakage-Aware Multi-Hazard Climate Risk Prediction Framework with Stateless Real-Time Inference}
+
+\author{\IEEEauthorblockN{Author 1 Name}
+\IEEEauthorblockA{\textit{Department} \\
+\textit{Institution Placeholder}\\
+City, Country \\
+email1@domain.edu}
+\and
+\IEEEauthorblockN{Author 2 Name}
+\IEEEauthorblockA{\textit{Department} \\
+\textit{Institution Placeholder}\\
+City, Country \\
+email2@domain.edu}
+\and
+\IEEEauthorblockN{Author 3 Name}
+\IEEEauthorblockA{\textit{Department} \\
+\textit{Institution Placeholder}\\
+City, Country \\
+email3@domain.edu}
+\and
+\IEEEauthorblockN{Guide Name}
+\IEEEauthorblockA{\textit{Department} \\
+\textit{Institution Placeholder}\\
+City, Country \\
+guide\_email@domain.edu}
+}
+
+\maketitle
+
+\begin{abstract}
+Rising frequencies of climate-driven extremes necessitate robust early-warning systems, yet operational deployment is often hindered by stateful sequence models and methodological data leakage. This study introduces ClimateGuardian AI, a machine-learning framework for flood, heatwave, and compound hazard prediction. Evaluated on a 45-feature hydro-climate dataset covering 2000--2018, the system enforces a strict chronological split (Train: 2000--2012, Validation: 2013--2015, Test: 2016--2018) alongside train-only preprocessing to eliminate temporal leakage. The framework implements hazard-specific stateless algorithms: a Random Forest for flood risk (F1=0.4686, ROC-AUC=0.7184), a restricted LightGBM for heatwave risk that explicitly drops proxy variables to prevent target leakage (F1=0.8878, ROC-AUC=0.9969), and a Logistic Regression Stacking Ensemble merging XGBoost and LightGBM bases for operational compound prediction (F1=0.3419, ROC-AUC=0.9495). While an offline Gated Recurrent Unit (GRU) sequence benchmark achieved higher historical compound performance (F1=0.4343, ROC-AUC=0.9598), the Stacking Ensemble was selected as the operational model due to its stateless architectural feasibility, avoiding the latency of maintaining 14-day recurrent input buffers. Finally, the framework integrates natively with the Open-Meteo REST API, demonstrating end-to-end stateless real-time inference applicability.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Climate Risk Prediction, Flood Prediction, Heatwave Prediction, Compound Events, Machine Learning, Leakage-Aware Evaluation, Real-Time Inference
+\end{IEEEkeywords}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/experimental_setup}
+\input{sections/results_discussion}
+\input{sections/realtime}
+\input{sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
